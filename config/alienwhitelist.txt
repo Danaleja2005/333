@@ -1,0 +1,13 @@
+some~user - Species
+BlackCrystalic +All
+BlackCrystalic - All
+BlackCrystalic - +All
+RuCat +Synth
+Rucat - Synth
+Rucat - +Synth
+Sarumyn +Synth
+Sarumyn - Synth
+Sarumyn - +Synth
+Ahdeza +Yautjaelder
+Ahdeza - Yautjaelder
+Ahdeza - +Yautjaelder
