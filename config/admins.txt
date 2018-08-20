@@ -7,4 +7,5 @@
 
 # not_a_user - Host
 BlackCrystalic - Host
+RuCat - Vice Host
 Daniel.A27 - Lead Spriter
