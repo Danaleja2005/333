@@ -3,7 +3,6 @@
 #define SUPPLY_STATIONZ 1       //Z-level of the Station.
 #define SUPPLY_STATION_AREATYPE "/area/supply/station" //Type of the supply shuttle area for station
 #define SUPPLY_DOCK_AREATYPE "/area/supply/dock"	//Type of the supply shuttle area for dock
-#define SUPPLY_COST_MULTIPLIER 1.08
 
 var/datum/controller/supply/supply_controller = new()
 
@@ -38,7 +37,7 @@ var/list/mechtoys = list(
 //SUPPLY PACKS MOVED TO /code/defines/obj/supplypacks.dm
 
 /obj/structure/plasticflaps //HOW DO YOU CALL THOSE THINGS ANYWAY
-	name = "\improper plastic flaps"
+	name = "plastic flaps"
 	desc = "Completely impassable - or are they?"
 	icon = 'icons/obj/stationobjs.dmi' //Change this.
 	icon_state = "plasticflaps"
@@ -76,7 +75,7 @@ var/list/mechtoys = list(
 				cdel(src)
 
 /obj/structure/plasticflaps/mining //A specific type for mining that doesn't allow airflow because of them damn crates
-	name = "\improper Airtight plastic flaps"
+	name = "Airtight plastic flaps"
 	desc = "Heavy duty, airtight, plastic flaps."
 
 
@@ -621,7 +620,6 @@ var/list/mechtoys = list(
 					supply_controller.requestlist.Cut(i,i+1)
 					supply_controller.points -= round(P.cost)
 					supply_controller.shoppinglist += O
-					P.cost = P.cost * SUPPLY_COST_MULTIPLIER
 					temp = "Thank you for your order.<BR>"
 					temp += "<BR><A href='?src=\ref[src];viewrequests=1'>Back</A> <A href='?src=\ref[src];mainmenu=1'>Main Menu</A>"
 				else

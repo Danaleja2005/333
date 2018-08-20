@@ -236,7 +236,6 @@ Defined in conflicts.dm of the #defines folder.
 	New()
 		..()
 		accuracy_mod = config.min_hit_accuracy_mult
-		damage_mod = -config.min_hit_damage_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
 		attach_icon = pick("suppressor_a","suppressor2_a")
@@ -276,9 +275,6 @@ Defined in conflicts.dm of the #defines folder.
 
 	New()
 		..()
-		accuracy_mod = -config.min_hit_accuracy_mult
-
-		accuracy_unwielded_mod = -config.min_hit_accuracy_mult
 
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
@@ -290,7 +286,6 @@ Defined in conflicts.dm of the #defines folder.
 	New()
 		..()
 		accuracy_mod = config.med_hit_accuracy_mult
-		damage_mod = -config.min_hit_damage_mult
 
 
 
@@ -322,7 +317,7 @@ Defined in conflicts.dm of the #defines folder.
 	New()
 		..()
 		accuracy_mod = config.med_hit_accuracy_mult
-		damage_mod = -config.low_hit_damage_mult
+		damage_mod = -config.min_hit_damage_mult
 		recoil_mod = -config.med_recoil_value
 
 		damage_falloff_mod = 0.4
@@ -447,7 +442,7 @@ Defined in conflicts.dm of the #defines folder.
 		..()
 		accuracy_mod = -config.low_hit_accuracy_mult
 		scatter_mod = config.min_scatter_value
-		delay_mod = -config.mlow_fire_delay
+		delay_mod = -config.min_fire_delay
 		burst_mod = -config.min_burst_value
 		accuracy_unwielded_mod = -config.med_hit_accuracy_mult
 		scatter_unwielded_mod = config.med_scatter_value
@@ -485,7 +480,6 @@ Defined in conflicts.dm of the #defines folder.
 		..()
 		delay_mod = config.mhigh_fire_delay
 		accuracy_mod = config.high_hit_accuracy_mult
-		burst_mod = -config.min_burst_value
 		movement_acc_penalty_mod = 2
 		accuracy_unwielded_mod = -config.min_hit_accuracy_mult
 
@@ -535,7 +529,7 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 14
 
 /obj/item/attachable/stock/shotgun
-	name = "\improper M37 wooden stock"
+	name = "M37 wooden stock"
 	desc = "A non-standard heavy wooden stock for the M37 Shotgun. Less quick and more cumbersome than the standard issue stakeout, but reduces recoil and improves accuracy. Allegedly makes a pretty good club in a fight too.."
 	slot = "stock"
 	icon_state = "stock"
@@ -545,7 +539,6 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = config.min_hit_accuracy_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
-		delay_mod = config.high_fire_delay
 		movement_acc_penalty_mod = -1
 		accuracy_unwielded_mod = config.min_hit_accuracy_mult
 		recoil_unwielded_mod = -config.min_recoil_value
@@ -554,7 +547,7 @@ Defined in conflicts.dm of the #defines folder.
 		select_gamemode_skin(type)
 
 /obj/item/attachable/stock/tactical
-	name = "\improper MK221 tactical stock"
+	name = "MK221 tactical stock"
 	icon_state = "tactical_stock"
 
 	New()
@@ -562,7 +555,6 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = config.min_hit_accuracy_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
-		delay_mod = config.high_fire_delay
 		movement_acc_penalty_mod = -1
 		accuracy_unwielded_mod = config.min_hit_accuracy_mult
 		recoil_unwielded_mod = -config.min_recoil_value
@@ -581,7 +573,6 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = config.min_hit_accuracy_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
-		delay_mod = config.med_fire_delay
 		movement_acc_penalty_mod = -1
 		accuracy_unwielded_mod = config.min_hit_accuracy_mult
 		recoil_unwielded_mod = -config.min_recoil_value
@@ -589,7 +580,7 @@ Defined in conflicts.dm of the #defines folder.
 
 
 /obj/item/attachable/stock/rifle
-	name = "\improper M41A skeleton stock"
+	name = "M41A skeleton stock"
 	desc = "A rare stock distributed in small numbers to USCM forces. Compatible with the M41A, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Seemingly a bit more effective in a brawl"
 	slot = "stock"
 	melee_mod = 5
@@ -604,7 +595,6 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = config.low_hit_accuracy_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
-		delay_mod = config.med_fire_delay
 		movement_acc_penalty_mod = -1
 		accuracy_unwielded_mod = config.min_hit_accuracy_mult
 		recoil_unwielded_mod = -config.min_recoil_value
@@ -612,7 +602,7 @@ Defined in conflicts.dm of the #defines folder.
 
 
 /obj/item/attachable/stock/rifle/marksman
-	name = "\improper M41A marksman stock"
+	name = "M41A marksman stock"
 	icon_state = "m4markstock"
 	attach_icon = "m4markstock"
 	flags_attach_features = NOFLAGS
@@ -634,7 +624,6 @@ Defined in conflicts.dm of the #defines folder.
 		accuracy_mod = config.min_hit_accuracy_mult
 		recoil_mod = -config.min_recoil_value
 		scatter_mod = -config.min_scatter_value
-		delay_mod = config.mlow_fire_delay
 		movement_acc_penalty_mod = -1
 		accuracy_unwielded_mod = config.min_hit_accuracy_mult
 		recoil_unwielded_mod = -config.min_recoil_value
@@ -643,7 +632,7 @@ Defined in conflicts.dm of the #defines folder.
 
 
 /obj/item/attachable/stock/revolver
-	name = "\improper M44 magnum sharpshooter stock"
+	name = "M44 magnum sharpshooter stock"
 	desc = "A wooden stock modified for use on a 44-magnum. Increases accuracy and reduces recoil at the expense of handling and agility. Less effective in melee as well"
 	slot = "stock"
 	melee_mod = -5
@@ -1012,7 +1001,6 @@ Defined in conflicts.dm of the #defines folder.
 
 	New()
 		..()
-		delay_mod = config.mlow_fire_delay
 
 	activate_attachment(obj/item/weapon/gun/G,mob/living/user, turn_off)
 		if(turn_off)

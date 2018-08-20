@@ -30,8 +30,8 @@
 	attack_sound = null
 	friendly = "nuzzles"
 	wall_smash = 0
-	health = 350
-	maxHealth = 350
+	health = 300
+	maxHealth = 300
 	amount_grown = 0
 	max_grown = 10
 	plasma_stored = 300
@@ -39,14 +39,14 @@
 	plasma_gain = 30
 	is_intelligent = 1
 	speed = 0.6
-	upgrade_threshold = 800
+	upgrade_threshold = 400
 	evolution_allowed = FALSE
 	pixel_x = -16
 	old_x = -16
 	fire_immune = 1
 	mob_size = MOB_SIZE_BIG
 	drag_delay = 6 //pulling a big dead xeno is hard
-	armor_deflection = 50
+	armor_deflection = 45
 	tier = 0 //Queen doesn't count towards population limit.
 	upgrade = 0
 	aura_strength = 2 //The Queen's aura is strong and stays so, and gets devastating late game. Climbs by 1 to 5
@@ -176,9 +176,9 @@
 
 	//if(charge_speed < charge_speed_buildup * charge_turfs_to_charge || !is_charging) return ..()
 
-	if(stat || !A || !istype(A) || A == src || !yes) r_FAL
+	if(stat || !A || !istype(A) || A == src || !yes) return FALSE
 
-	if(now_pushing) r_FAL//Just a plain ol turf, let's return.
+	if(now_pushing) return FALSE//Just a plain ol turf, let's return.
 
 	/*if(dir != charge_dir) //We aren't facing the way we're charging.
 		stop_momentum()
@@ -193,7 +193,7 @@
 		return ..()
 
 	lastturf = null //Reset this so we can properly continue with momentum.
-	r_TRU
+	return TRUE
 
 //Chance of insta limb amputation after a melee attack.
 /mob/living/carbon/Xenomorph/Queen/proc/delimb(var/mob/living/carbon/human/H, var/datum/limb/O)
@@ -252,7 +252,7 @@
 		return
 
 	var/queensWord = "<br><h2 class='alert'>The words of the queen reverberate in your head...</h2>"
-	queensWord += "<br><span class='alert'>[input]</span><br>"
+	queensWord += "<br><span class='alert'>[sanitize(input)]</span><br>"
 
 	if(ticker && ticker.mode)
 		for(var/datum/mind/L in ticker.mode.xenomorphs)

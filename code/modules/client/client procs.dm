@@ -1,6 +1,7 @@
 	////////////
 	//SECURITY//
 	////////////
+#define TOPIC_SPAM_DELAY	2		//2 ticks is about 2/10ths of a second; it was 4 ticks, but that caused too many clicks to be lost due to lag
 #define UPLOAD_LIMIT		10485760	//Restricts client uploads to the server to 10MB //Boosted this thing. What's the worst that can happen?
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
@@ -23,6 +24,10 @@
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
 
+	//Reduces spamming of links by dropping calls that happen during the delay period
+	if(next_allowed_topic_time > world.time)
+		return
+	next_allowed_topic_time = world.time + TOPIC_SPAM_DELAY
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
@@ -136,7 +141,7 @@
 	if(custom_event_msg && custom_event_msg != "")
 		src << "<h1 class='alert'>Custom Event</h1>"
 		src << "<h2 class='alert'>A custom event is taking place. OOC Info:</h2>"
-		src << "<span class='alert'>[html_encode(custom_event_msg)]</span>"
+		src << "<span class='alert'>[lhtml_encode(custom_event_msg)]</span>"
 		src << "<br>"
 
 	if( (world.address == address || !address) && !host )

@@ -888,7 +888,7 @@ var/global/image/busy_indicator_hostile
 
 
 /proc/do_after(mob/user, delay, needhand = TRUE, numticks = 5, show_busy_icon, selected_zone_check) //hacky, will suffice for now.
-	if(!istype(user) || delay <= 0) r_FAL
+	if(!istype(user) || delay <= 0) return FALSE
 
 	var/mob/living/L
 	if(istype(user, /mob/living)) L = user //No more doing things while you're in crit
@@ -1507,7 +1507,7 @@ var/list/WALLITEMS = list(
 	return 0
 
 /proc/format_text(text)
-	return oldreplacetext(oldreplacetext(text,"\proper ",""),"\improper ","")
+	return oldreplacetext(oldreplacetext(text,"\proper ",""),"","")
 
 /proc/topic_link(var/datum/D, var/arglist, var/content)
 	if(istype(arglist,/list))

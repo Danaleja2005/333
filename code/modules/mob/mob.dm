@@ -266,7 +266,7 @@ var/list/slot_equipment_priority = list( \
 
 	if(msg != null)
 		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
-		msg = html_encode(msg)
+		msg = lhtml_encode(msg)
 
 		flavor_text = msg
 
@@ -638,12 +638,12 @@ mob/proc/yank_out_object()
 	if(self)
 		if(get_active_hand())
 			src << "<span class='warning'>You need an empty hand for this!</span>"
-			r_FAL
+			return FALSE
 		src << "<span class='warning'>You attempt to get a good grip on [selection] in your body.</span>"
 	else
 		if(get_active_hand())
 			U << "<span class='warning'>You need an empty hand for this!</span>"
-			r_FAL
+			return FALSE
 		U << "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>"
 
 	if(!do_after(U, 80, TRUE, 5, BUSY_ICON_FRIENDLY))

@@ -26,7 +26,7 @@
 
 		// Otherwise jump
 		else
-			unfollow()
+			following = null
 			loc = get_turf(A)
 
 		return 1

@@ -97,6 +97,7 @@
 	name = "Combat Medic"
 	leadership = SKILL_LEAD_BEGINNER
 	medical = SKILL_MEDICAL_MEDIC
+	surgery = SKILL_SURGERY_TRAINED
 
 /datum/skills/combat_medic/crafty
 	name = "Crafty Combat Medic"
@@ -420,3 +421,4 @@
 	large_vehicle = SKILL_LARGE_VEHICLE_TRAINED
 	powerloader = SKILL_POWERLOADER_DABBLING
 	leadership = SKILL_LEAD_TRAINED
+	engineer = SKILL_ENGINEER_MT

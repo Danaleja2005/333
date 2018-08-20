@@ -18,7 +18,6 @@
 #define MARINE_CAN_BUY_MASK			2048
 #define MARINE_CAN_BUY_ESSENTIALS	4096
 #define MARINE_CAN_BUY_ATTACHMENT	8192
-
 #define MARINE_CAN_BUY_ALL			16383
 
 #define MARINE_TOTAL_BUY_POINTS		45
@@ -29,7 +28,7 @@
 
 
 /obj/machinery/marine_selector
-	name = "\improper Theoretical Marine selector"
+	name = "Theoretical Marine selector"
 	desc = ""
 	icon = 'icons/obj/machines/vending.dmi'
 	density = TRUE
@@ -247,6 +246,7 @@
 						else
 							H << "<span class='warning'><b>Something bad occured with [src], tell a Dev.</b></span>"
 							return
+					H.update_action_buttons()
 					available_specialist_sets -= p_name
 
 

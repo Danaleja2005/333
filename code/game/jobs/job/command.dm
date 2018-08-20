@@ -19,8 +19,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	selection_color = "#ccccff"
 	idtype = /obj/item/card/id/gold
 	minimal_player_age = 14
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_MODE|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED
-	flags_whitelist = WHITELIST_COMMANDER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_MODE|ROLE_ADMIN_NOTIFY
 	skills_type = /datum/skills/commander
 
 	generate_wearable_equipment()
@@ -99,8 +98,8 @@ Make the USCM proud!"}
 	comm_title = "SO"
 	paygrade = "O2"
 	flag = ROLE_BRIDGE_OFFICER
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 3
+	spawn_positions = 3
 	scaled = 1
 	access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_BRIDGE, ACCESS_MARINE_BRIG, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LOGISTICS)
 	minimal_access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_BRIDGE, ACCESS_MARINE_BRIG, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LOGISTICS)
@@ -231,8 +230,8 @@ While you are an officer, your authority is limited to your own vehicle, where y
 	comm_title = "MP"
 	paygrade = "E6"
 	flag = ROLE_MILITARY_POLICE
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 3
+	spawn_positions = 3
 	scaled = 1
 	selection_color = "#ffdddd"
 	access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_BRIG, ACCESS_MARINE_BRIDGE, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LOGISTICS, ACCESS_MARINE_PREP)

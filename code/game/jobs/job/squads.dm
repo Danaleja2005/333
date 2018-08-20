@@ -44,27 +44,12 @@
 	usable = 1
 	radio_freq = ALPHA_FREQ
 
-/datum/squad/bravo
-	name = "Bravo"
-	color = 2
-	access = list(ACCESS_MARINE_BRAVO)
-	usable = 1
-	radio_freq = BRAVO_FREQ
-
-/datum/squad/charlie
-	name = "Charlie"
-	color = 3
-	access = list(ACCESS_MARINE_CHARLIE)
-	usable = 1
-	radio_freq = CHARLIE_FREQ
-
 /datum/squad/delta
 	name = "Delta"
 	color = 4
 	access = list(ACCESS_MARINE_DELTA)
 	usable = 1
 	radio_freq = DELTA_FREQ
-
 
 //Straight-up insert a marine into a squad.
 //This sets their ID, increments the total count, and so on. Everything else is done in job_controller.dm.
@@ -176,6 +161,7 @@
 				old_lead.mind.role_comm_title = "Mar"
 				if(old_lead.mind.cm_skills)
 					old_lead.mind.cm_skills.leadership = SKILL_LEAD_NOVICE
+		old_lead.update_action_buttons()
 
 	if(!old_lead.mind || old_lead.mind.assigned_role != "Squad Leader" || !leader_killed)
 		if(istype(old_lead.wear_ear, /obj/item/device/radio/headset/almayer/marine))

@@ -49,6 +49,7 @@ var/global/list/cargo_guns_vendors = list() //Used by our gamemode code
 var/global/list/processing_objects = list()
 var/global/list/active_diseases = list()
 var/global/list/events = list()
+var/global/list/localisation = list()
 
 //used by binoculars for dropship bombardment
 var/list/global/active_laser_targets = list()
@@ -137,6 +138,12 @@ var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel")
 		var/datum/surgery_step/S = new T
 		surgery_steps += S
 	sort_surgeries()
+
+	// Local Letters
+	paths = typesof(/datum/letter) - /datum/letter
+	for(var/T in paths)
+		var/datum/letter/L = new T
+		localisation += L
 
 	// Medical side effects. List all effects by their names
 	paths = typesof(/datum/medical_effect)-/datum/medical_effect

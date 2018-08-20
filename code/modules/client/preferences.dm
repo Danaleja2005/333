@@ -904,13 +904,13 @@ datum/preferences
 					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing.","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
 						msg = copytext(msg, 1, 256)
-						msg = html_encode(msg)
+						msg = lhtml_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 				else
 					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
 					if(msg != null)
 						msg = copytext(msg, 1, 256)
-						msg = html_encode(msg)
+						msg = lhtml_encode(msg)
 					flavor_texts[href_list["task"]] = msg
 			SetFlavorText(user)
 			return
@@ -928,7 +928,7 @@ datum/preferences
 
 					if(medmsg != null)
 						medmsg = copytext(medmsg, 1, MAX_PAPER_MESSAGE_LEN)
-						medmsg = html_encode(medmsg)
+						medmsg = lhtml_encode(medmsg)
 
 						med_record = medmsg
 						SetRecords(user)
@@ -938,7 +938,7 @@ datum/preferences
 
 					if(secmsg != null)
 						secmsg = copytext(secmsg, 1, MAX_PAPER_MESSAGE_LEN)
-						secmsg = html_encode(secmsg)
+						secmsg = lhtml_encode(secmsg)
 
 						sec_record = secmsg
 						SetRecords(user)
@@ -947,7 +947,7 @@ datum/preferences
 
 					if(genmsg != null)
 						genmsg = copytext(genmsg, 1, MAX_PAPER_MESSAGE_LEN)
-						genmsg = html_encode(genmsg)
+						genmsg = lhtml_encode(genmsg)
 
 						gen_record = genmsg
 						SetRecords(user)
@@ -957,7 +957,7 @@ datum/preferences
 
 					if(exploitmsg != null)
 						exploitmsg = copytext(exploitmsg, 1, MAX_PAPER_MESSAGE_LEN)
-						exploitmsg = html_encode(exploitmsg)
+						exploitmsg = lhtml_encode(exploitmsg)
 
 						exploit_record = exploitmsg
 						SetAntagoptions(user)
@@ -1212,7 +1212,7 @@ datum/preferences
 						nanotrasen_relation = new_relation
 
 				if("prefsquad")
-					var/new_pref_squad = input(user, "Choose your preferred squad.", "Character Preference")  as null|anything in list("Alpha", "Bravo", "Charlie", "Delta", "None")
+					var/new_pref_squad = input(user, "Choose your preferred squad.", "Character Preference")  as null|anything in list("Alpha", "Delta", "None")
 					if(new_pref_squad)
 						preferred_squad = new_pref_squad
 
