@@ -2,8 +2,8 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-CREATE SCHEMA IF NOT EXISTS `tgstation` DEFAULT CHARACTER SET latin1 ;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci ;
+CREATE SCHEMA IF NOT EXISTS `tgstation` DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci ;
 USE `mydb` ;
 USE `tgstation` ;
 
@@ -29,7 +29,7 @@ CREATE  TABLE IF NOT EXISTS `tgstation`.`death` (
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 3409
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = cp1251;
 
 
 -- -----------------------------------------------------
@@ -49,7 +49,7 @@ CREATE  TABLE IF NOT EXISTS `tgstation`.`karma` (
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 943
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = cp1251;
 
 
 -- -----------------------------------------------------
@@ -62,7 +62,7 @@ CREATE  TABLE IF NOT EXISTS `tgstation`.`karmatotals` (
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 244
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = cp1251;
 
 
 -- -----------------------------------------------------
@@ -77,7 +77,7 @@ CREATE  TABLE IF NOT EXISTS `tgstation`.`library` (
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 184
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = cp1251;
 
 
 -- -----------------------------------------------------
@@ -91,7 +91,7 @@ CREATE  TABLE IF NOT EXISTS `tgstation`.`population` (
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM
 AUTO_INCREMENT = 2544
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = cp1251;
 
 
 

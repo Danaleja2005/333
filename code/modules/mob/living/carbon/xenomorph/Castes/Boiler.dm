@@ -16,7 +16,7 @@
 	plasma_stored = 450
 	plasma_gain = 30
 	plasma_max = 800
-	upgrade_threshold = 400
+	upgrade_threshold = 800
 	evolution_allowed = FALSE
 	spit_delay = 40
 	speed = 0.7

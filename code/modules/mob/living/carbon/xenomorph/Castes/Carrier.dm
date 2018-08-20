@@ -15,7 +15,7 @@
 	maxHealth = 175
 	plasma_stored = 50
 	plasma_max = 250
-	upgrade_threshold = 400
+	upgrade_threshold = 800
 	evolution_allowed = FALSE
 	plasma_gain = 8
 	caste_desc = "A carrier of huggies."
@@ -30,7 +30,7 @@
 	var/hugger_delay = 30
 	var/eggs_cur = 0
 	var/eggs_max = 3
-	tier = 2
+	tier = 3
 	upgrade = 0
 	pixel_x = -16 //Needed for 2x2
 	old_x = -16

@@ -1,2 +1,1 @@
- # ColonialMarines:Emergency Access
- [![Build Status]()
+## Highly reinforced by DMCA

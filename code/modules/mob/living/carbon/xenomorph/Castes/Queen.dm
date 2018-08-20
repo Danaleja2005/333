@@ -21,8 +21,8 @@
 	desc = "A huge, looming alien creature. The biggest and the baddest."
 	icon = 'icons/Xeno/xenomorph_64x64.dmi'
 	icon_state = "Queen Walking"
-	melee_damage_lower = 30
-	melee_damage_upper = 46
+	melee_damage_lower = 35
+	melee_damage_upper = 50
 	tacklemin = 4
 	tacklemax = 6
 	tackle_chance = 80
@@ -30,16 +30,16 @@
 	attack_sound = null
 	friendly = "nuzzles"
 	wall_smash = 0
-	health = 300
-	maxHealth = 300
+	health = 450
+	maxHealth = 450
 	amount_grown = 0
 	max_grown = 10
-	plasma_stored = 300
-	plasma_max = 700
+	plasma_stored = 500
+	plasma_max = 800
 	plasma_gain = 30
 	is_intelligent = 1
 	speed = 0.6
-	upgrade_threshold = 400
+	upgrade_threshold = 800
 	evolution_allowed = FALSE
 	pixel_x = -16
 	old_x = -16
@@ -252,7 +252,7 @@
 		return
 
 	var/queensWord = "<br><h2 class='alert'>The words of the queen reverberate in your head...</h2>"
-	queensWord += "<br><span class='alert'>[sanitize(input)]</span><br>"
+	queensWord += "<br><span class='alert'>[input]</span><br>"
 
 	if(ticker && ticker.mode)
 		for(var/datum/mind/L in ticker.mode.xenomorphs)
