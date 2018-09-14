@@ -11,7 +11,7 @@
 		for(var/datum/mind/L in ticker.mode.xenomorphs)
 			var/mob/living/carbon/Xenomorph/M = L.current
 			if(M && istype(M) && !M.stat && M.client && hivenumber == M.hivenumber) //Only living and connected xenos
-				M << "<span class='xenodanger'><font size=[size]> [message]</font></span>"
+				to_chat(M, "<span class='xenodanger'><font size=[size]> [message]</font></span>")
 
 //Adds stuff to your "Status" pane -- Specific castes can have their own, like carrier hugger count
 //Those are dealt with in their caste files.
@@ -83,7 +83,7 @@
 
 		if(hivenumber != XENO_HIVE_CORRUPTED)
 			if(hive.hive_orders && hive.hive_orders != "")
-				stat(null,"Hive Orders: [hive.hive_orders]")
+				stat(null,"Hive Orders: [sanitize(hive.hive_orders)]")
 		else
 			stat(null,"Hive Orders: Follow the instructions of your masters")
 
@@ -92,22 +92,22 @@
 //A simple handler for checking your state. Used in pretty much all the procs.
 /mob/living/carbon/Xenomorph/proc/check_state()
 	if(is_mob_incapacitated() || lying || buckled)
-		src << "<span class='warning'>You cannot do this in your current state.</span>"
+		to_chat(src, "<span class='warning'>You cannot do this in your current state.</span>")
 		return 0
 	return 1
 
 //Checks your plasma levels and gives a handy message.
 /mob/living/carbon/Xenomorph/proc/check_plasma(value)
 	if(stat)
-		src << "<span class='warning'>You cannot do this in your current state.</span>"
+		to_chat(src, "<span class='warning'>You cannot do this in your current state.</span>")
 		return 0
 
 	if(value)
 		if(plasma_stored < value)
 			if(is_robotic)
-				src << "<span class='warning'>Beep. You do not have enough plasma to do this. You require [value] plasma but have only [plasma_stored] stored.</span>"
+				to_chat(src, "<span class='warning'>Beep. You do not have enough plasma to do this. You require [value] plasma but have only [plasma_stored] stored.</span>")
 			else
-				src << "<span class='warning'>You do not have enough plasma to do this. You require [value] plasma but have only [plasma_stored] stored.</span>"
+				to_chat(src, "<span class='warning'>You do not have enough plasma to do this. You require [value] plasma but have only [plasma_stored] stored.</span>")
 			return 0
 	return 1
 
@@ -149,11 +149,14 @@
 	if(frenzy_aura)
 		. -= (frenzy_aura * 0.05)
 
+	if(slowdown)
+		. += slowdown
+
 	if(is_charging)
 		if(legcuffed)
 			is_charging = 0
 			stop_momentum()
-			src << "<span class='xenodanger'>You can't charge with that thing on your leg!</span>"
+			to_chat(src, "<span class='xenodanger'>You can't charge with that thing on your leg!</span>")
 		else
 			. -= charge_speed
 			charge_timer = 2
@@ -271,7 +274,7 @@
 
 /mob/living/carbon/Xenomorph/proc/toggle_nightvision()
 	if(see_invisible == SEE_INVISIBLE_MINIMUM)
-		see_invisible = SEE_INVISIBLE_LEVEL_TWO //Turn it off.
+		see_invisible = INVISIBILITY_LIGHTING //Turn it off.
 		see_in_dark = 4
 		sight |= SEE_MOBS
 		sight &= ~SEE_TURFS
@@ -302,8 +305,7 @@
 	playsound(loc, "alien_bite", 25)
 	visible_message("<span class='danger'>\The [M] is viciously shredded by \the [src]'s sharp teeth!</span>", \
 	"<span class='danger'>You viciously rend \the [M] with your teeth!</span>", null, 5)
-	M.attack_log += text("\[[time_stamp()]\] <font color='red'>bit [src.name] ([src.ckey])</font>")
-	attack_log += text("\[[time_stamp()]\] <font color='orange'>was bitten by [M.name] ([M.ckey])</font>")
+	log_combat(M, src, "bitten")
 
 	M.apply_damage(damage, BRUTE, affecting, armor_block, sharp = 1) //This should slicey dicey
 	M.updatehealth()
@@ -330,8 +332,7 @@
 	playsound(M.loc, 'sound/weapons/alien_tail_attack.ogg', 25, 1) //Stolen from Yautja! Owned!
 	visible_message("<span class='danger'>\The [M] is suddenly impaled by \the [src]'s sharp tail!</span>", \
 	"<span class='danger'>You violently impale \the [M] with your tail!</span>", null, 5)
-	M.attack_log += text("\[[time_stamp()]\] <font color='red'>tail-stabbed [M.name] ([M.ckey])</font>")
-	attack_log += text("\[[time_stamp()]\] <font color='orange'>was tail-stabbed by [src.name] ([src.ckey])</font>")
+	log_combat(src, M, "tail-stabbed")
 
 	M.apply_damage(damage, BRUTE, affecting, armor_block, sharp = 1, edge = 1) //This should slicey dicey
 	M.updatehealth()
@@ -378,10 +379,10 @@
 	var/has_obstacle
 	for(var/obj/O in current_turf)
 		if(istype(O, /obj/item/clothing/mask/facehugger))
-			src << "<span class='warning'>There is a little one here already. Best move it.</span>"
+			to_chat(src, "<span class='warning'>There is a little one here already. Best move it.</span>")
 			return
 		if(istype(O, /obj/effect/alien/egg))
-			src << "<span class='warning'>There's already an egg.</span>"
+			to_chat(src, "<span class='warning'>There's already an egg.</span>")
 			return
 		if(istype(O, /obj/structure/mineral_door) || istype(O, /obj/effect/alien/resin))
 			has_obstacle = TRUE
@@ -404,7 +405,7 @@
 			break
 
 	if(current_turf.density || has_obstacle)
-		src << "<span class='warning'>There's something built here already.</span>"
+		to_chat(src, "<span class='warning'>There's something built here already.</span>")
 		return
 
 	return 1
@@ -413,7 +414,7 @@
 	var/obj/item/clothing/mask/facehugger/F = get_active_hand()
 	if(istype(F))
 		if(locate(/turf/closed/wall/resin) in loc)
-			src << "<span class='warning'>You decide not to drop [F] after all.</span>"
+			to_chat(src, "<span class='warning'>You decide not to drop [F] after all.</span>")
 			return
 
 	. = ..()
@@ -523,8 +524,8 @@
 	if(!Q || !Q.anchored || !queen_chosen_lead || !Q.current_aura || Q.loc.z != loc.z) //We are no longer a leader, or the Queen attached to us has dropped from her ovi, disabled her pheromones or even died
 		leader_aura_strength = 0
 		leader_current_aura = ""
-		src << "<span class='xenowarning'>Your pheromones wane. The Queen is no longer granting you her pheromones.</span>"
+		to_chat(src, "<span class='xenowarning'>Your pheromones wane. The Queen is no longer granting you her pheromones.</span>")
 	else
 		leader_aura_strength = Q.aura_strength
 		leader_current_aura = Q.current_aura
-		src << "<span class='xenowarning'>Your pheromones have changed. The Queen has new plans for the Hive.</span>"
+		to_chat(src, "<span class='xenowarning'>Your pheromones have changed. The Queen has new plans for the Hive.</span>")

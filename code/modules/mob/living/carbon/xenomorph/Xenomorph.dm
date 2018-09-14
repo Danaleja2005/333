@@ -16,12 +16,13 @@
 	set desc = "Shows whether or not a mine is contained within the xenomorph list."
 
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING || !ticker.mode)
-		src << "<span class='warning'>The round is either not ready, or has already finished.</span>"
+		to_chat(src, "<span class='warning'>The round is either not ready, or has already finished.</span>")
 		return
 	if(mind in ticker.mode.xenomorphs)
-		src << "<span class='debuginfo'>[src] mind is in the xenomorph list. Mind key is [mind.key].</span>"
-		src << "<span class='debuginfo'>Current mob is: [mind.current]. Original mob is: [mind.original].</span>"
-	else src << "<span class='debuginfo'>This xenomorph is not in the xenomorph list.</span>"
+		to_chat(src, "<span class='debuginfo'>[src] mind is in the xenomorph list. Mind key is [mind.key].</span>")
+		to_chat(src, "<span class='debuginfo'>Current mob is: [mind.current]. Original mob is: [mind.original].</span>")
+	else
+		to_chat(src, "<span class='debuginfo'>This xenomorph is not in the xenomorph list.</span>")
 #endif
 
 #undef DEBUG_XENO
@@ -133,12 +134,12 @@
 	//Queens have weird, hardcoded naming conventions based on upgrade levels. They also never get nicknumbers
 	if(caste == "Queen")
 		switch(upgrade)
-			if(0) name = "\improper [name_prefix]Queen"			 //Young
-			if(1) name = "\improper [name_prefix]Elite Queen"	 //Mature
-			if(2) name = "\improper [name_prefix]Elite Empress"	 //Elite
-			if(3) name = "\improper [name_prefix]Ancient Empress" //Ancient
-	else if(caste == "Predalien") name = "\improper [name_prefix][name] ([nicknumber])"
-	else name = "\improper [name_prefix][upgrade_name] [caste] ([nicknumber])"
+			if(0) name = "[name_prefix]Princess"			 //Young
+			if(1) name = "[name_prefix]Queen"	 //Mature
+			if(2) name = "[name_prefix]Empress"	 //Elite
+			if(3) name = "[name_prefix]Ancient Empress" //Ancient
+	else if(caste == "Predalien") name = "[name_prefix][name] ([nicknumber])"
+	else name = "[name_prefix][upgrade_name] [caste] ([nicknumber])"
 
 	//Update linked data so they show up properly
 	real_name = name
@@ -147,30 +148,30 @@
 /mob/living/carbon/Xenomorph/examine(mob/user)
 	..()
 	if(isXeno(user) && caste_desc)
-		user << caste_desc
+		to_chat(user, caste_desc)
 
 	if(stat == DEAD)
-		user << "It is DEAD. Kicked the bucket. Off to that great hive in the sky."
+		to_chat(user, "It is DEAD. Kicked the bucket. Off to that great hive in the sky.")
 	else if(stat == UNCONSCIOUS)
-		user << "It quivers a bit, but barely moves."
+		to_chat(user, "It quivers a bit, but barely moves.")
 	else
 		var/percent = (health / maxHealth * 100)
 		switch(percent)
 			if(95 to 101)
-				user << "It looks quite healthy."
+				to_chat(user, "It looks quite healthy.")
 			if(75 to 94)
-				user << "It looks slightly injured."
+				to_chat(user, "It looks slightly injured.")
 			if(50 to 74)
-				user << "It looks injured."
+				to_chat(user, "It looks injured.")
 			if(25 to 49)
-				user << "It bleeds with sizzling wounds."
+				to_chat(user, "It bleeds with sizzling wounds.")
 			if(1 to 24)
-				user << "It is heavily injured and limping badly."
+				to_chat(user, "It is heavily injured and limping badly.")
 
 	if(hivenumber != XENO_HIVE_NORMAL)
 		if(hivenumber && hivenumber <= hive_datum.len)
 			var/datum/hive_status/hive = hive_datum[hivenumber]
-			user << "It appears to belong to the [hive.prefix]hive"
+			to_chat(user, "It appears to belong to the [hive.prefix]hive")
 	return
 
 /mob/living/carbon/Xenomorph/Dispose()

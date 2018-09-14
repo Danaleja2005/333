@@ -38,7 +38,7 @@
 								ammo_count += transf_amt
 								SA.ammo_count -= transf_amt
 								playsound(loc, 'sound/machines/hydraulics_1.ogg', 40, 1)
-								user << "<span class='notice'>You transfer [transf_amt] [ammo_name] to [src].</span>"
+								to_chat(user, "<span class='notice'>You transfer [transf_amt] [ammo_name] to [src].</span>")
 								if(!SA.ammo_count)
 									PC.loaded = null
 									PC.update_icon()
@@ -48,7 +48,7 @@
 					PC.loaded = src
 					playsound(loc, 'sound/machines/hydraulics_2.ogg', 40, 1)
 					PC.update_icon()
-					user << "<span class='notice'>You grab [PC.loaded] with [PC].</span>"
+					to_chat(user, "<span class='notice'>You grab [PC.loaded] with [PC].</span>")
 					update_icon()
 			return TRUE
 		. = ..()
@@ -56,11 +56,11 @@
 
 	examine(mob/user)
 		..()
-		user << "Moving this will require some sort of lifter."
+		to_chat(user, "Moving this will require some sort of lifter.")
 
 //what to show to the user that examines the weapon we're loaded on.
 /obj/structure/ship_ammo/proc/show_loaded_desc(mob/user)
-	user << "It's loaded with \a [src]."
+	to_chat(user, "It's loaded with \a [src].")
 	return
 
 /obj/structure/ship_ammo/proc/detonate_on(turf/impact)
@@ -84,13 +84,13 @@
 
 	examine(mob/user)
 		..()
-		user << "It has [ammo_count] round\s."
+		to_chat(user, "It has [ammo_count] round\s.")
 
 	show_loaded_desc(mob/user)
 		if(ammo_count)
-			user << "It's loaded with \a [src] containing [ammo_count] round\s."
+			to_chat(user, "It's loaded with \a [src] containing [ammo_count] round\s.")
 		else
-			user << "It's loaded with an empty [name]."
+			to_chat(user, "It's loaded with an empty [name].")
 
 	detonate_on(turf/impact)
 		set waitfor = 0
@@ -152,14 +152,14 @@
 
 /obj/structure/ship_ammo/laser_battery/examine(mob/user)
 	..()
-	user << "It's at [round(100*ammo_count/max_ammo_count)]% charge."
+	to_chat(user, "It's at [round(100*ammo_count/max_ammo_count)]% charge.")
 
 
 /obj/structure/ship_ammo/laser_battery/show_loaded_desc(mob/user)
 	if(ammo_count)
-		user << "It's loaded with \a [src] at [round(100*ammo_count/max_ammo_count)]% charge."
+		to_chat(user, "It's loaded with \a [src] at [round(100*ammo_count/max_ammo_count)]% charge.")
 	else
-		user << "It's loaded with an empty [name]."
+		to_chat(user, "It's loaded with an empty [name].")
 
 
 /obj/structure/ship_ammo/laser_battery/detonate_on(turf/impact)
@@ -330,11 +330,11 @@
 
 	show_loaded_desc(mob/user)
 		if(ammo_count)
-			user << "It's loaded with \a [src] containing [ammo_count] minirocket\s."
+			to_chat(user, "It's loaded with \a [src] containing [ammo_count] minirocket\s.")
 
 	examine(mob/user)
 		..()
-		user << "It has [ammo_count] minirocket\s."
+		to_chat(user, "It has [ammo_count] minirocket\s.")
 
 
 /obj/structure/ship_ammo/minirocket/incendiary
@@ -349,3 +349,39 @@
 			for(var/turf/T in range(2, impact))
 				if(!locate(/obj/flamer_fire) in T) // No stacking flames!
 					new/obj/flamer_fire(T)
+
+/obj/structure/ship_ammo/minirocket/illumination
+	name = "illumination rocket-launched flare stack"
+	desc = "A pack of laser guided mini rockets, each loaded with a payload of white-star illuminant and a parachute, while extremely ineffective at damaging the enemy, it is very effective at lighting the battlefield so marines can damage the enemy."
+	icon_state = "minirocket_ilm"
+	point_cost = 250
+	detonate_on(turf/impact)
+		impact.ceiling_debris_check(2)
+		spawn(5)
+			var/turf/T = pick(range(5, impact))
+			explosion(T,-1,-1,1, 2, 0)// Smaller explosion to prevent this becoming the PO meta
+			var/datum/effect_system/expl_particles/P = new/datum/effect_system/expl_particles()
+			P.set_up(4, 0, T)
+			P.start()
+			spawn(5)
+				var/datum/effect_system/smoke_spread/S = new/datum/effect_system/smoke_spread()
+				S.set_up(1,0,T,null)
+				S.start()
+			new/obj/item/device/flashlight/flare/on/cas(T) // thx
+			if(!ammo_count && loc)
+				cdel(src) //deleted after last minirocket is fired and impact the ground.
+/obj/item/device/flashlight/flare/on/cas
+	name = "illumination flare"
+	desc = "Report this if you actually see this FUCK"
+	icon_state = "" //No sprite
+	invisibility = 101
+	mouse_opacity = 0
+	brightness_on = 8 //Magnesium/sodium fires (White star) really are bright
+	New()
+		..()
+		var/turf/T = get_turf(src)
+		fuel = rand(1000, 1100) // About the same burn time as a flare, considering it requires it's own CAS run.
+		T.visible_message("<span class='warning'>You see a flare go up in the sky!</span>")
+		playsound(T, 'sound/weapons/gun_flare.ogg', 50, 1, 4) // stolen from the mortar i'm not even sorry
+		spawn(10) // Sloppy i know but the only way to fix this.
+			update_brightness()

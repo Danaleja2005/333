@@ -37,9 +37,9 @@
 	see_in_dark = 8
 
 	for(var/mob/dead/observer/M in player_list)
-		M << "\red <B>A hellhound is now available to play!</b> Please be sure you can follow the rules."
-		M << "\red Click 'Join as hellhound' in the ghost panel to become one. First come first serve!"
-		M << "\red If you need help during play, click adminhelp and ask."
+		to_chat(M, "\red <B>A hellhound is now available to play!</b> Please be sure you can follow the rules.")
+		to_chat(M, "\red Click 'Join as hellhound' in the ghost panel to become one. First come first serve!")
+		to_chat(M, "\red If you need help during play, click adminhelp and ask.")
 
 
 
@@ -72,7 +72,7 @@
 		src.start_pulling(H)
 	else
 		if(isYautja(H))
-			src << "Your loyalty to the Yautja forbids you from harming them."
+			to_chat(src, "Your loyalty to the Yautja forbids you from harming them.")
 			return
 
 		var/dmg = rand(10,25)
@@ -133,7 +133,7 @@
 		return
 	else
 		if(istype(H,/mob/living/simple_animal/corgi)) //Kek
-			src << "Awww.. it's so harmless. Better leave it alone."
+			to_chat(src, "Awww.. it's so harmless. Better leave it alone.")
 			return
 		if(isYautja(H))
 			return
@@ -164,7 +164,7 @@
 //punched by a hu-man
 /mob/living/carbon/hellhound/attack_hand(mob/living/carbon/human/M as mob)
 	if (!ticker)
-		M << "You cannot attack people before the game has started."
+		to_chat(M, "You cannot attack people before the game has started.")
 		return
 
 	if (M.a_intent == "help")
@@ -180,8 +180,7 @@
 
 				adjustBruteLoss(damage)
 
-				M.attack_log += text("\[[time_stamp()]\] <font color='red'>[pick(attack.attack_verb)]ed [src.name] ([src.ckey])</font>")
-				src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been [pick(attack.attack_verb)]ed by [M.name] ([M.ckey])</font>")
+				log_combat(M, src, "[pick(attack.attack_verb)]ed")
 				msg_admin_attack("[key_name(M)] [pick(attack.attack_verb)]ed [key_name(src)]")
 
 				updatehealth()
@@ -219,8 +218,7 @@
 			playsound(loc, M.attack_sound, 25, 1)
 		for(var/mob/O in viewers(src, null))
 			O.show_message("\red <B>[M]</B> [M.attacktext] [src]!", 1)
-		M.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [src.name] ([src.ckey])</font>")
-		src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was attacked by [M.name] ([M.ckey])</font>")
+		log_combat(M, src, "attacked")
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
 		adjustBruteLoss(damage)
 		updatehealth()
@@ -251,7 +249,7 @@
 /mob/living/carbon/hellhound/say(var/message)
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
-			src << "\red You cannot speak in IC (Muted)."
+			to_chat(src, "\red You cannot speak in IC (Muted).")
 			return
 	message =  trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
 	if(stat == 2)
@@ -268,20 +266,20 @@
 			message = trim(copytext(message,2))
 			if(!message) return
 			for(var/mob/living/carbon/hellhound/M in living_mob_list)
-				M << "\blue <B>\[RADIO\]</b>: [src.name] [verb_used], '<B>[message]<B>'."
+				to_chat(M, "\blue <B>\[RADIO\]</b>: [src.name] [verb_used], '<B>[message]<B>'.")
 			return
 
 	message = capitalize(trim_left(message))
 	if(!message || stat)
 		return
 
-	src << "\blue You say, '<B>[message]</b>'."
+	to_chat(src, "\blue You say, '<B>[message]</b>'.")
 	for(var/mob/living/carbon/hellhound/H in orange(9))
-		H << "\blue [src.name] [verb_used], '[message]'."
+		to_chat(H, "\blue [src.name] [verb_used], '[message]'.")
 
 	for(var/mob/living/carbon/C in orange(6))
 		if(!istype(C,/mob/living/carbon/hellhound))
-			C << "\blue [src.name] [verb_used]."
+			to_chat(C, "\blue [src.name] [verb_used].")
 	return
 
 /mob/living/carbon/hellhound/movement_delay()

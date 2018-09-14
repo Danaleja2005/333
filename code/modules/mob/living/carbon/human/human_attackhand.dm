@@ -49,10 +49,10 @@
 //			if(M.health < -75)	return 0
 
 			if((M.head && (M.head.flags_inventory & COVERMOUTH)) || (M.wear_mask && (M.wear_mask.flags_inventory & COVERMOUTH)))
-				M << "\blue <B>Remove your mask!</B>"
+				to_chat(M, "\blue <B>Remove your mask!</B>")
 				return 0
 			if((head && (head.flags_inventory & COVERMOUTH)) || (wear_mask && (wear_mask.flags_inventory & COVERMOUTH)))
-				M << "\blue <B>Remove his mask!</B>"
+				to_chat(M, "\blue <B>Remove his mask!</B>")
 				return 0
 
 			//CPR
@@ -66,8 +66,8 @@
 					adjustOxyLoss(-suff)
 					updatehealth()
 					visible_message("\red [M] performs CPR on [src]!", null, null, 3)
-					src << "\blue <b>You feel a breath of fresh air enter your lungs. It feels good.</b>"
-					M << "\red Repeat at least every 7 seconds."
+					to_chat(src, "\blue <b>You feel a breath of fresh air enter your lungs. It feels good.</b>")
+					to_chat(M, "\red Repeat at least every 7 seconds.")
 
 
 			return 1
@@ -88,8 +88,7 @@
 			if(!attack.is_usable(M)) attack = M.species.secondary_unarmed
 			if(!attack.is_usable(M)) return
 
-			M.attack_log += text("\[[time_stamp()]\] <font color='red'>[pick(attack.attack_verb)]ed [src.name] ([src.ckey])</font>")
-			attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been [pick(attack.attack_verb)]ed by [M.name] ([M.ckey])</font>")
+			log_combat(M, src, "[pick(attack.attack_verb)]ed")
 			msg_admin_attack("[key_name(M)] [pick(attack.attack_verb)]ed [key_name(src)]")
 
 			M.animation_attack_on(src)
@@ -120,8 +119,7 @@
 
 
 		if("disarm")
-			M.attack_log += text("\[[time_stamp()]\] <font color='red'>Disarmed [src.name] ([src.ckey])</font>")
-			src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been disarmed by [M.name] ([M.ckey])</font>")
+			log_combat(M, src, "disarmed")
 
 			M.animation_attack_on(src)
 			M.flick_attack_overlay(src, "disarm")
@@ -233,7 +231,7 @@
 				if(org.status & LIMB_DESTROYED)
 					status = "MISSING!"
 
-				src << "\t [status=="OK"?"\blue ":"\red "]My [org.display_name] is [status]."
+				to_chat(src, "\t [status=="OK"?"\blue ":"\red "]My [org.display_name] is [status].")
 			if((SKELETON in mutations) && !w_uniform && !wear_suit)
 				play_xylophone()
 		else

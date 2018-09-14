@@ -141,7 +141,7 @@ var/list/mechtoys = list(
 
 	//Supply shuttle ticker - handles supply point regenertion and shuttle travelling between centcomm and the station
 	proc/process()
-		for(var/typepath in (typesof(/datum/supply_packs) - /datum/supply_packs))
+		for(var/typepath in subtypesof(/datum/supply_packs))
 			var/datum/supply_packs/P = new typepath()
 			supply_packs[P.name] = P
 
@@ -417,7 +417,7 @@ var/list/mechtoys = list(
 
 /obj/machinery/computer/supplycomp/attack_hand(var/mob/user as mob)
 	if(!allowed(user))
-		user << "\red Access Denied."
+		to_chat(user, "\red Access Denied.")
 		return
 
 	if(..())
@@ -476,7 +476,7 @@ var/list/mechtoys = list(
 
 /obj/machinery/computer/supplycomp/attackby(I as obj, user as mob)
 	if(istype(I,/obj/item/card/emag) && !hacked)
-		user << "\blue Special supplies unlocked."
+		to_chat(user, "\blue Special supplies unlocked.")
 		hacked = 1
 		return
 	else
@@ -485,11 +485,11 @@ var/list/mechtoys = list(
 
 /obj/machinery/computer/supplycomp/Topic(href, href_list)
 	if(!supply_controller)
-		world.log << "## ERROR: Eek. The supply_controller controller datum is missing somehow."
+		log_world("## ERROR: Eek. The supply_controller controller datum is missing somehow.")
 		return
 	var/datum/shuttle/ferry/supply/shuttle = supply_controller.shuttle
 	if (!shuttle)
-		world.log << "## ERROR: Eek. The supply/shuttle datum is missing somehow."
+		log_world("## ERROR: Eek. The supply/shuttle datum is missing somehow.")
 		return
 	if(..())
 		return
@@ -608,7 +608,7 @@ var/list/mechtoys = list(
 		temp += "<BR><A href='?src=\ref[src];order=[last_viewed_group]'>Back</A>|<A href='?src=\ref[src];mainmenu=1'>Main Menu</A>"
 
 		if(supply_controller.shoppinglist.len > 20)
-			usr << "\red Current retrieval load has reached maximum capacity."
+			to_chat(usr, "\red Current retrieval load has reached maximum capacity.")
 			return
 
 		for(var/i=1, i<=supply_controller.requestlist.len, i++)

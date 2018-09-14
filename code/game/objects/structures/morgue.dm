@@ -160,7 +160,7 @@
 
 /obj/structure/morgue/crematorium/toggle_morgue(mob/user)
 	if (cremating)
-		user << "<span class='warning'>It's locked.</span>"
+		to_chat(user, "<span class='warning'>It's locked.</span>")
 		return
 	..()
 
@@ -200,8 +200,7 @@
 					if (!(C.species && (C.species.flags & NO_PAIN)))
 						C.emote("scream")
 
-			user.attack_log +="\[[time_stamp()]\] Cremated <b>[M]/[M.ckey]</b>"
-			log_attack("\[[time_stamp()]\] <b>[user]/[user.ckey]</b> cremated <b>[M]/[M.ckey]</b>")
+			log_combat(user, M, "creamated", src)
 			M.death(1)
 			M.ghostize()
 			cdel(M)
@@ -238,7 +237,7 @@
 				if(!C.cremating)
 					C.cremate(user)
 	else
-		user << "\red Access denied."
+		to_chat(user, "\red Access denied.")
 
 
 

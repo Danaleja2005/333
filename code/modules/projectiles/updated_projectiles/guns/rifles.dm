@@ -26,6 +26,7 @@
 	scatter_unwielded = config.max_scatter_value
 	damage_mult = config.base_hit_damage_mult
 	recoil_unwielded = config.high_recoil_value
+	damage_falloff_mult = config.med_damage_falloff_mult
 
 /obj/item/weapon/gun/rifle/unique_action(mob/user)
 	cock(user)
@@ -339,7 +340,7 @@
 
 
 /obj/item/weapon/gun/rifle/type71/toggle_burst()
-	usr << "<span class='warning'>This weapon can only fire in bursts!</span>"
+	to_chat(usr, "<span class='warning'>This weapon can only fire in bursts!</span>")
 
 
 /obj/item/weapon/gun/rifle/type71/flamer

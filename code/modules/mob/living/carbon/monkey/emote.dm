@@ -25,7 +25,7 @@
 			if(player_caused)
 				if (src.client)
 					if (client.prefs.muted & MUTE_IC)
-						src << "\red You cannot send IC messages (muted)."
+						to_chat(src, "\red You cannot send IC messages (muted).")
 						return
 					if (src.client.handle_spam_prevention(message,MUTE_IC))
 						return
@@ -121,12 +121,12 @@
 			m_type = 1
 		if("help")
 			text += "choke, collapse, dance, deathgasp, drool, gasp, shiver, gnarl, jump, paw, moan, nod, roar, roll, scratch,\nscretch, shake, sign-#, sit, sulk, sway, tail, twitch, whimper"
-			src << text
+			to_chat(src, text)
 		else
-			src << text("Invalid Emote: []", act)
+			to_chat(src, text("Invalid Emote: []", act))
 	if (message)
 		if(src.client)
-			log_emote("[name]/[key] : [message]")
+			log_message(message, LOG_EMOTE)
 		if (m_type & 1)
 			for(var/mob/O in viewers(src, null))
 				O.show_message(message, m_type)

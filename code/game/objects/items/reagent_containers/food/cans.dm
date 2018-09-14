@@ -4,24 +4,24 @@
 	attack_self(mob/user as mob)
 		if (canopened == 0)
 			playsound(src.loc,'sound/effects/canopen.ogg', 15, 1)
-			user << "<span class='notice'>You open the drink with an audible pop!</span>"
+			to_chat(user, "<span class='notice'>You open the drink with an audible pop!</span>")
 			canopened = 1
 		else
 			return
 
 	attack(mob/M as mob, mob/user as mob, def_zone)
 		if (canopened == 0)
-			user << "<span class='notice'>You need to open the drink!</span>"
+			to_chat(user, "<span class='notice'>You need to open the drink!</span>")
 			return
 		var/datum/reagents/R = src.reagents
 		var/fillevel = gulp_size
 
 		if(!R.total_volume || !R)
-			user << "\red The [src.name] is empty!"
+			to_chat(user, "\red The [src.name] is empty!")
 			return 0
 
 		if(M == user)
-			M << "\blue You swallow a gulp of [src]."
+			to_chat(M, "\blue You swallow a gulp of [src].")
 			if(reagents.total_volume)
 				reagents.trans_to_ingest(M, gulp_size)
 				reagents.reaction(M, INGEST)
@@ -32,7 +32,7 @@
 			return 1
 		else if( istype(M, /mob/living/carbon/human) )
 			if (canopened == 0)
-				user << "<span class='notice'>You need to open the drink!</span>"
+				to_chat(user, "<span class='notice'>You need to open the drink!</span>")
 				return
 
 		else if (canopened == 1)
@@ -44,8 +44,7 @@
 
 			var/rgt_list_text = get_reagent_list_text()
 
-			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been fed [src.name] by [user.name] ([user.ckey]) Reagents: [rgt_list_text]</font>")
-			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Fed [M.name] by [M.name] ([M.ckey]) Reagents: [rgt_list_text]</font>")
+			log_combat(user, M, "fed", src, "Reagents: [rgt_list_text]")
 			msg_admin_attack("[key_name(user)] fed [key_name(M)] with [src.name] Reagents: [rgt_list_text] (INTENT: [uppertext(user.a_intent)]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
 
 			if(reagents.total_volume)
@@ -69,19 +68,19 @@
 
 		if(istype(target, /obj/structure/reagent_dispensers)) //A dispenser. Transfer FROM it TO us.
 			if (canopened == 0)
-				user << "<span class='notice'>You need to open the drink!</span>"
+				to_chat(user, "<span class='notice'>You need to open the drink!</span>")
 				return
 
 
 		else if(target.is_open_container()) //Something like a glass. Player probably wants to transfer TO it.
 			if (canopened == 0)
-				user << "<span class='notice'>You need to open the drink!</span>"
+				to_chat(user, "<span class='notice'>You need to open the drink!</span>")
 				return
 
 			if (istype(target, /obj/item/reagent_container/food/drinks/cans))
 				var/obj/item/reagent_container/food/drinks/cans/cantarget = target
 				if(cantarget.canopened == 0)
-					user << "<span class='notice'>You need to open the drink you want to pour into!</span>"
+					to_chat(user, "<span class='notice'>You need to open the drink you want to pour into!</span>")
 					return
 
 		return ..()

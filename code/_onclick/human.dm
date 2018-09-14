@@ -20,7 +20,7 @@
 	var/mob/living/carbon/human/H = A
 
 	if (last_chew + 75 > world.time)
-		H << "\red You can't bite your hand again yet..."
+		to_chat(H, "\red You can't bite your hand again yet...")
 		return
 
 
@@ -35,8 +35,7 @@
 
 	var/s = "\red [H.name] chews on \his [O.display_name]!"
 	H.visible_message(s, "\red You chew on your [O.display_name]!")
-	H.attack_log += text("\[[time_stamp()]\] <font color='red'>[s] ([H.ckey])</font>")
-	log_attack("[s] ([H.ckey])")
+	H.log_message("[s] ([key_name(H)])", LOG_ATTACK)
 
 	if(O.take_damage(1,0,1,1,"teeth marks"))
 		H.UpdateDamageIcon()
@@ -58,7 +57,7 @@
 
 	var/datum/limb/temp = get_limb(hand ? "l_hand" : "r_hand")
 	if(temp && !temp.is_usable())
-		src << "<span class='notice'>You try to move your [temp.display_name], but cannot!"
+		to_chat(src, "<span class='notice'>You try to move your [temp.display_name], but cannot!")
 		return
 
 	A.attack_hand(src)

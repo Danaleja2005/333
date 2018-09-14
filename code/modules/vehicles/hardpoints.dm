@@ -12,6 +12,7 @@ Currently only has the tank hardpoints
 	icon = 'icons/obj/hardpoint_modules.dmi'
 	icon_state = "tires" //Placeholder
 
+	var/maxhealth = 100
 	health = 100
 	w_class = 15
 
@@ -25,6 +26,7 @@ Currently only has the tank hardpoints
 	var/next_use = 0
 	var/is_activatable = 0
 	var/max_angle = 180
+	var/point_cost = 0
 
 	var/list/backup_clips = list()
 	var/max_clips = 1 //1 so they can reload their backups and actually reload once
@@ -51,30 +53,30 @@ Currently only has the tank hardpoints
 //If our cooldown has elapsed
 /obj/item/hardpoint/proc/is_ready()
 	if(owner.z == 2 || owner.z == 3)
-		usr << "<span class='warning'>Don't fire here, you'll blow a hole in the ship!</span>"
+		to_chat(usr, "<span class='warning'>Don't fire here, you'll blow a hole in the ship!</span>")
 		return 0
 	return 1
 
 /obj/item/hardpoint/proc/try_add_clip(var/obj/item/ammo_magazine/A, var/mob/user)
 
 	if(max_clips == 0)
-		user << "<span class='warning'>This module does not have room for additional ammo.</span>"
+		to_chat(user, "<span class='warning'>This module does not have room for additional ammo.</span>")
 		return 0
 	else if(backup_clips.len >= max_clips)
-		user << "<span class='warning'>The reloader is full.</span>"
+		to_chat(user, "<span class='warning'>The reloader is full.</span>")
 		return 0
 	else if(!istype(A, ammo.type))
-		user << "<span class='warning'>That is the wrong ammo type.</span>"
+		to_chat(user, "<span class='warning'>That is the wrong ammo type.</span>")
 		return 0
 
-	user << "<span class='notice'>Installing \the [A] in \the [owner].</span>"
+	to_chat(user, "<span class='notice'>Installing \the [A] in \the [owner].</span>")
 
 	if(!do_after(user, 10))
-		user << "<span class='warning'>Something interrupted you while reloading [owner].</span>"
+		to_chat(user, "<span class='warning'>Something interrupted you while reloading [owner].</span>")
 		return 0
 
 	user.temp_drop_inv_item(A, 0)
-	user << "<span class='notice'>You install \the [A] in \the [owner].</span>"
+	to_chat(user, "<span class='notice'>You install \the [A] in \the [owner].</span>")
 	backup_clips += A
 	return 1
 
@@ -107,7 +109,7 @@ Currently only has the tank hardpoints
 
 	var/nx = dx * cos(deg) - dy * sin(deg)
 	var/ny = dx * sin(deg) + dy * cos(deg)
-	if(nx == 0) return max_angle >= 90
+	if(nx == 0) return max_angle >= 180
 	var/angle = arctan(ny/nx)
 	if(nx < 0) angle += 180
 	return abs(angle) <= max_angle
@@ -138,7 +140,9 @@ Currently only has the tank hardpoints
 	name = "LTB Cannon"
 	desc = "A primary cannon for tanks that shoots explosive rounds"
 
+	maxhealth = 500
 	health = 500
+	point_cost = 100
 
 	icon_state = "ltb_cannon"
 
@@ -155,17 +159,17 @@ Currently only has the tank hardpoints
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["primary"] * owner.misc_ratios["prim_cool"]
@@ -181,7 +185,9 @@ Currently only has the tank hardpoints
 	name = "LTAA-AP Minigun"
 	desc = "A primary weapon for tanks that spews bullets"
 
+	maxhealth = 350
 	health = 350
+	point_cost = 100
 
 	icon_state = "ltaaap_minigun"
 
@@ -213,17 +219,17 @@ Currently only has the tank hardpoints
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		var/S = 'sound/weapons/tank_minigun_start.ogg'
@@ -259,7 +265,9 @@ Currently only has the tank hardpoints
 	name = "Secondary Flamer Unit"
 	desc = "A secondary weapon for tanks that shoots flames"
 
+	maxhealth = 300
 	health = 300
+	point_cost = 100
 
 	icon_state = "flamer"
 
@@ -275,17 +283,17 @@ Currently only has the tank hardpoints
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["secondary"] * owner.misc_ratios["secd_cool"]
@@ -301,7 +309,9 @@ Currently only has the tank hardpoints
 	name = "TOW Launcher"
 	desc = "A secondary weapon for tanks that shoots rockets"
 
+	maxhealth = 500
 	health = 500
+	point_cost = 100
 
 	icon_state = "tow_launcher"
 
@@ -314,21 +324,21 @@ Currently only has the tank hardpoints
 
 	apply_buff()
 		owner.cooldowns["secondary"] = 150
-		owner.accuracies["secondary"] = 0.8
+		owner.accuracies["secondary"] = 0.97
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["secondary"] * owner.misc_ratios["secd_cool"]
@@ -343,7 +353,9 @@ Currently only has the tank hardpoints
 	name = "M56 Cupola"
 	desc = "A secondary weapon for tanks that shoots bullets"
 
+	maxhealth = 350
 	health = 350
+	point_cost = 50
 
 	icon_state = "m56_cupola"
 
@@ -352,25 +364,25 @@ Currently only has the tank hardpoints
 
 	ammo = new /obj/item/ammo_magazine/tank/m56_cupola
 	max_clips = 1
-	max_angle = 90
+	max_angle = 360
 
 	apply_buff()
 		owner.cooldowns["secondary"] = 5
-		owner.accuracies["secondary"] = 0.7
+		owner.accuracies["secondary"] = 0.9
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["secondary"] * owner.misc_ratios["secd_cool"]
@@ -386,7 +398,9 @@ Currently only has the tank hardpoints
 	name = "Grenade Launcher"
 	desc = "A secondary weapon for tanks that shoots grenades"
 
+	maxhealth = 500
 	health = 500
+	point_cost = 25
 
 	icon_state = "glauncher"
 
@@ -403,17 +417,17 @@ Currently only has the tank hardpoints
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["secondary"] * owner.misc_ratios["secd_cool"]
@@ -436,7 +450,9 @@ Currently only has the tank hardpoints
 	name = "Smoke Launcher"
 	desc = "Launches smoke forward to obscure vision"
 
+	maxhealth = 300
 	health = 300
+	point_cost = 10
 
 	icon_state = "slauncher_0"
 
@@ -453,17 +469,17 @@ Currently only has the tank hardpoints
 
 	is_ready()
 		if(world.time < next_use)
-			usr << "<span class='warning'>This module is not ready to be used yet.</span>"
+			to_chat(usr, "<span class='warning'>This module is not ready to be used yet.</span>")
 			return 0
 		if(health <= 0)
-			usr << "<span class='warning'>This module is too broken to be used.</span>"
+			to_chat(usr, "<span class='warning'>This module is too broken to be used.</span>")
 			return 0
 		return 1
 
 	active_effect(var/turf/T)
 
 		if(ammo.current_rounds <= 0)
-			usr << "<span class='warning'>This module does not have any ammo.</span>"
+			to_chat(usr, "<span class='warning'>This module does not have any ammo.</span>")
 			return
 
 		next_use = world.time + owner.cooldowns["support"] * owner.misc_ratios["supp_cool"]
@@ -494,7 +510,9 @@ Currently only has the tank hardpoints
 	name = "Integrated Weapons Sensor Array"
 	desc = "Improves the accuracy and fire rate of all onboard weapons"
 
+	maxhealth = 250
 	health = 250
+	point_cost = 100
 
 	icon_state = "warray"
 
@@ -523,7 +541,9 @@ Currently only has the tank hardpoints
 	name = "Overdrive Enhancer"
 	desc = "Increases the movement speed of the vehicle it's atached to"
 
+	maxhealth = 250
 	health = 250
+	point_cost = 100
 
 	icon_state = "odrive_enhancer"
 
@@ -540,7 +560,9 @@ Currently only has the tank hardpoints
 	name = "Artillery Module"
 	desc = "Allows the gunner to look far into the distance."
 
+	maxhealth = 250
 	health = 250
+	point_cost = 100
 	is_activatable = 1
 	var/is_active = 0
 
@@ -561,9 +583,11 @@ Currently only has the tank hardpoints
 			M.client.change_view(7)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
+			M.artmod_use = 0
 			is_active = 0
 			return
 		M.client.change_view(view_buff)
+		M.artmod_use = 1
 		is_active = 1
 		switch(C.dir)
 			if(NORTH)
@@ -588,6 +612,7 @@ Currently only has the tank hardpoints
 		M.client.change_view(7)
 		M.client.pixel_x = 0
 		M.client.pixel_y = 0
+		M.artmod_use = 0
 
 	remove_buff()
 		deactivate()
@@ -607,7 +632,9 @@ Currently only has the tank hardpoints
 	name = "Ballistic Armor"
 	desc = "Protects the vehicle from high-penetration weapons"
 
+	maxhealth = 1000
 	health = 1000
+	point_cost = 100
 
 	icon_state = "ballistic_armor"
 
@@ -628,7 +655,9 @@ Currently only has the tank hardpoints
 	name = "Caustic Armor"
 	desc = "Protects vehicles from most types of acid"
 
+	maxhealth = 1000
 	health = 1000
+	point_cost = 100
 
 	icon_state = "caustic_armor"
 
@@ -647,7 +676,9 @@ Currently only has the tank hardpoints
 	name = "Concussive Armor"
 	desc = "Protects the vehicle from high-impact weapons"
 
+	maxhealth = 1000
 	health = 1000
+	point_cost = 100
 
 	icon_state = "concussive_armor"
 
@@ -666,7 +697,9 @@ Currently only has the tank hardpoints
 	name = "Paladin Armor"
 	desc = "Protects the vehicle from large incoming explosive projectiles"
 
+	maxhealth = 1000
 	health = 1000
+	point_cost = 100
 
 	icon_state = "paladin_armor"
 
@@ -685,8 +718,10 @@ Currently only has the tank hardpoints
 	name = "Snowplow"
 	desc = "Clears a path in the snow for friendlies"
 
-	health = 600
+	maxhealth = 300
+	health = 300
 	is_activatable = 1
+	point_cost = 20
 
 	icon_state = "snowplow"
 
@@ -712,7 +747,9 @@ Currently only has the tank hardpoints
 	name = "Treads"
 	desc = "Integral to the movement of the vehicle"
 
+	maxhealth = 500
 	health = 500
+	point_cost = 25
 
 	icon_state = "treads"
 
@@ -740,6 +777,7 @@ Currently only has the tank hardpoints
 //Special ammo magazines for hardpoint modules. Some aren't here since you can use normal magazines on them
 /obj/item/ammo_magazine/tank
 	flags_magazine = 0 //No refilling
+	var/point_cost = 0
 
 /obj/item/ammo_magazine/tank/ltb_cannon
 	name = "LTB Cannon Magazine"
@@ -749,6 +787,7 @@ Currently only has the tank hardpoints
 	w_class = 15 //Heavy fucker
 	default_ammo = /datum/ammo/rocket/ltb
 	max_rounds = 4
+	point_cost = 50
 	gun_type = /obj/item/hardpoint/primary/cannon
 
 	update_icon()
@@ -762,6 +801,7 @@ Currently only has the tank hardpoints
 	icon_state = "painless"
 	default_ammo = /datum/ammo/bullet/minigun
 	max_rounds = 300
+	point_cost = 25
 	gun_type = /obj/item/hardpoint/primary/minigun
 
 
@@ -773,6 +813,7 @@ Currently only has the tank hardpoints
 	w_class = 12
 	default_ammo = /datum/ammo/flamethrower/tank_flamer
 	max_rounds = 120
+	point_cost = 50
 	gun_type = /obj/item/hardpoint/secondary/flamer
 
 
@@ -782,8 +823,9 @@ Currently only has the tank hardpoints
 	caliber = "rocket" //correlates to any rocket mags
 	icon_state = "quad_rocket"
 	w_class = 10
-	default_ammo = /datum/ammo/rocket/ap //Fun fact, AP rockets seem to be a straight downgrade from normal rockets. Maybe I'm missing something...
-	max_rounds = 5
+	default_ammo = /datum/ammo/rocket/tow //Fun fact, AP rockets seem to be a straight downgrade from normal rockets. Maybe I'm missing something...
+	max_rounds = 2
+	point_cost = 100
 	gun_type = /obj/item/hardpoint/secondary/towlauncher
 
 
@@ -795,6 +837,7 @@ Currently only has the tank hardpoints
 	w_class = 12
 	default_ammo = /datum/ammo/bullet/smartgun
 	max_rounds = 500
+	point_cost = 10
 	gun_type = /obj/item/hardpoint/secondary/m56cupola
 
 
@@ -806,6 +849,7 @@ Currently only has the tank hardpoints
 	w_class = 9
 	default_ammo = /datum/ammo/grenade_container
 	max_rounds = 10
+	point_cost = 25
 	gun_type = /obj/item/hardpoint/secondary/grenade_launcher
 
 	update_icon()
@@ -825,6 +869,7 @@ Currently only has the tank hardpoints
 	w_class = 12
 	default_ammo = /datum/ammo/grenade_container/smoke
 	max_rounds = 6
+	point_cost = 5
 	gun_type = /obj/item/hardpoint/support/smoke_launcher
 
 	update_icon()

@@ -46,8 +46,8 @@
 	H.name = loc.name
 	H.attack_hand(grabber)
 
-	grabber << "You scoop up [src]."
-	src << "[grabber] scoops you up."
+	to_chat(grabber, "You scoop up [src].")
+	to_chat(src, "[grabber] scoops you up.")
 	grabber.status_flags |= PASSEMOTES
 	return
 
@@ -65,8 +65,8 @@
 	icon_state = "cat"
 	origin_tech = null
 
-/obj/item/holder/Jones
-	name = "Jones"
+/obj/item/holder/Barsik
+	name = "Barsik"
 	desc = "A tough, old stray whose origin no one seems to know."
 	icon_state = "cat2"
 	origin_tech = null

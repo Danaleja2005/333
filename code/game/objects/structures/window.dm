@@ -193,23 +193,23 @@
 		if(reinf && state >= 1)
 			state = 3 - state
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
-			user << (state == 1 ? "<span class='notice'>You have unfastened the window from the frame.</span>" : "<span class='notice'>You have fastened the window to the frame.</span>")
+			to_chat(user, (state == 1 ? "<span class='notice'>You have unfastened the window from the frame.</span>" : "<span class='notice'>You have fastened the window to the frame.</span>"))
 		else if(reinf && state == 0 && !static_frame)
 			anchored = !anchored
 			update_nearby_icons()
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
-			user << (anchored ? "<span class='notice'>You have fastened the frame to the floor.</span>" : "<span class='notice'>You have unfastened the frame from the floor.</span>")
+			to_chat(user, (anchored ? "<span class='notice'>You have fastened the frame to the floor.</span>" : "<span class='notice'>You have unfastened the frame from the floor.</span>"))
 		else if(!reinf && !static_frame)
 			anchored = !anchored
 			update_nearby_icons()
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
-			user << (anchored ? "<span class='notice'>You have fastened the window to the floor.</span>" : "<span class='notice'>You have unfastened the window.</span>")
+			to_chat(user, (anchored ? "<span class='notice'>You have fastened the window to the floor.</span>" : "<span class='notice'>You have unfastened the window.</span>"))
 		else if(static_frame && state == 0)
 			disassemble_window()
 	else if(istype(W, /obj/item/tool/crowbar) && reinf && state <= 1 && !not_deconstructable)
 		state = 1 - state
 		playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
-		user << (state ? "<span class='notice'>You have pried the window into the frame.</span>" : "<span class='notice'>You have pried the window out of the frame.</span>")
+		to_chat(user, (state ? "<span class='notice'>You have pried the window into the frame.</span>" : "<span class='notice'>You have pried the window out of the frame.</span>"))
 	else
 		if(!not_damageable) //Impossible to destroy
 			health -= W.force
@@ -250,7 +250,7 @@
 	if(not_deconstructable)
 		return 0
 	if(anchored)
-		usr << "<span class='warning'>It is fastened to the floor, you can't rotate it!</span>"
+		to_chat(usr, "<span class='warning'>It is fastened to the floor, you can't rotate it!</span>")
 		return 0
 
 	dir = turn(dir, 90)
@@ -267,7 +267,7 @@
 	if(not_deconstructable)
 		return 0
 	if(anchored)
-		usr << "<span class='warning'>It is fastened to the floor, you can't rotate it!</span>"
+		to_chat(usr, "<span class='warning'>It is fastened to the floor, you can't rotate it!</span>")
 		return 0
 
 	dir = turn(dir, 270)
@@ -489,12 +489,9 @@
 	health = 1000000 //Failsafe, shouldn't matter
 
 /obj/structure/window/framed/almayer/requisitions
-	name = "ultra-reinforced window"
-	desc = "An ultra-reinforced window designed to keep requisitions a secure area."
-	not_damageable = 1
-	not_deconstructable = 1
-	unacidable = 1
-	health = 1000000 //Failsafe, shouldn't matter
+	name = "kevlar-weave infused bulletproof window"
+	desc = "A borosilicate glass window infused with kevlar fibres and mounted within a special shock-absorbing frame, this is gonna be seriously hard to break through."
+	health = 400
 	window_frame = /obj/structure/window_frame/almayer/requisitions
 
 /obj/structure/window/framed/almayer/white

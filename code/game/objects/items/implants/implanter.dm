@@ -33,8 +33,7 @@
 				if(src.imp.implanted(M, user))
 					M.visible_message("<span class='warning'>[M] has been implanted by [user].</span>")
 
-					M.attack_log += text("\[[time_stamp()]\] <font color='orange'> Implanted with [src.name] ([src.imp.name])  by [user.name] ([user.ckey])</font>")
-					user.attack_log += text("\[[time_stamp()]\] <font color='red'>Used the [src.name] ([src.imp.name]) to implant [M.name] ([M.ckey])</font>")
+					log_combat(user, M, "implanted", src)
 					msg_admin_attack("[user.name] ([user.ckey]) implanted [M.name] ([M.ckey]) with [src.name] (INTENT: [uppertext(user.a_intent)]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
 
 					src.imp.loc = M
@@ -51,7 +50,7 @@
 					src.imp = null
 					update()
 				else
-					user << "<span class='notice'> You failed to implant [M].</span>"
+					to_chat(user, "<span class='notice'> You failed to implant [M].</span>")
 
 	return
 
@@ -109,7 +108,7 @@
 	var/obj/item/implant/compressed/c = imp
 	if (!c)	return
 	if (c.scanned == null)
-		user << "Please scan an object with the implanter first."
+		to_chat(user, "Please scan an object with the implanter first.")
 		return
 	..()
 
@@ -119,7 +118,7 @@
 	if(istype(A,/obj/item) && imp)
 		var/obj/item/implant/compressed/c = imp
 		if (c.scanned)
-			user << "\red Something is already scanned inside the implant!"
+			to_chat(user, "\red Something is already scanned inside the implant!")
 			return
 		c.scanned = A
 		if(istype(A.loc,/mob/living/carbon/human))

@@ -18,6 +18,7 @@
 #define AMMO_IGNORE_ARMOR		1024
 #define AMMO_IGNORE_RESIST		2048
 #define AMMO_BALLISTIC			4096
+#define AMMO_SKIP_BARRICADE		8192
 
 //Gun defines for gun related thing. More in the projectile folder.
 #define GUN_CAN_POINTBLANK		1
@@ -36,6 +37,7 @@
 #define GUN_WIELDED_FIRING_ONLY	8192
 #define GUN_HAS_FULL_AUTO		16384
 #define GUN_FULL_AUTO_ON		32768
+#define GUN_POLICE				65536
 
 //Gun attachable related flags.
 #define ATTACH_REMOVABLE	1

@@ -1,5 +1,5 @@
 /obj/vehicle/powerloader
-	name = "\improper Caterpillar P-5000 Work Loader"
+	name = "Caterpillar P-5000 Work Loader"
 	icon = 'icons/obj/powerloader.dmi'
 	desc = "The Caterpillar P-5000 Work Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects, first designed in January 29, 2025 by Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere."
 	icon_state = "powerloader_open"
@@ -79,10 +79,10 @@
 	if(!ishuman(M))	return
 	var/mob/living/carbon/human/H = M
 	if(H.mind && user.mind.cm_skills && !user.mind.cm_skills.powerloader)
-		H << "<span class='warning'>You don't seem to know how to operate [src].</span>"
+		to_chat(H, "<span class='warning'>You don't seem to know how to operate [src].</span>")
 		return
 	if(H.r_hand || H.l_hand)
-		H << "<span class='warning'>You need your two hands to use [src].</span>"
+		to_chat(H, "<span class='warning'>You need your two hands to use [src].</span>")
 		return
 	. = ..()
 
@@ -108,7 +108,7 @@
 	..()
 
 /obj/item/powerloader_clamp
-	name = "\improper Caterpillar P-5000 Work Loader Hydraulic Claw"
+	name = "Caterpillar P-5000 Work Loader Hydraulic Claw"
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "loader_clamp"
 	force = 20
@@ -142,25 +142,25 @@
 			if(!T.density)
 				for(var/atom/movable/AM in T.contents)
 					if(AM.density)
-						user << "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>"
+						to_chat(user, "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>")
 						return
 				if(loaded.bound_height > 32)
 					var/turf/next_turf = get_step(T, NORTH)
 					if(next_turf.density)
-						user << "<span class='warning'>You can't drop [loaded] here, something blocks the way.</span>"
+						to_chat(user, "<span class='warning'>You can't drop [loaded] here, something blocks the way.</span>")
 						return
 					for(var/atom/movable/AM in next_turf.contents)
 						if(AM.density)
-							user << "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>"
+							to_chat(user, "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>")
 							return
 				if(loaded.bound_width > 32)
 					var/turf/next_turf = get_step(T, EAST)
 					if(next_turf.density)
-						user << "<span class='warning'>You can't drop [loaded] here, something blocks the way.</span>"
+						to_chat(user, "<span class='warning'>You can't drop [loaded] here, something blocks the way.</span>")
 						return
 					for(var/atom/movable/AM in next_turf.contents)
 						if(AM.density)
-							user << "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>"
+							to_chat(user, "<span class='warning'>You can't drop [loaded] here, [AM] blocks the way.</span>")
 							return
 				user.visible_message("<span class='notice'>[user] drops [loaded] on [T] with [src].</span>",
 				"<span class='notice'>You drop [loaded] on [T] with [src].</span>")
@@ -174,7 +174,7 @@
 		if(!C.anchored && !C.store_mobs)
 			for(var/X in C)
 				if(ismob(X)) //just in case.
-					user << "<span class='warning'>Can't grab [loaded], it has a creature inside!</span>"
+					to_chat(user, "<span class='warning'>Can't grab [loaded], it has a creature inside!</span>")
 					return
 			if(linked_powerloader)
 				C.forceMove(linked_powerloader)
@@ -184,7 +184,7 @@
 				user.visible_message("<span class='notice'>[user] grabs [loaded] with [src].</span>",
 				"<span class='notice'>You grab [loaded] with [src].</span>")
 		else
-			user << "<span class='warning'>Can't grab [loaded].</span>"
+			to_chat(user, "<span class='warning'>Can't grab [loaded].</span>")
 
 	else if(istype(target, /obj/structure/largecrate))
 		var/obj/structure/largecrate/LC = target
@@ -197,7 +197,7 @@
 				user.visible_message("<span class='notice'>[user] grabs [loaded] with [src].</span>",
 				"<span class='notice'>You grab [loaded] with [src].</span>")
 		else
-			user << "<span class='warning'>Can't grab [loaded].</span>"
+			to_chat(user, "<span class='warning'>Can't grab [loaded].</span>")
 
 /obj/item/powerloader_clamp/update_icon()
 	if(loaded) icon_state = "loader_clamp_full"
@@ -208,7 +208,7 @@
 		linked_powerloader.unbuckle()
 
 /obj/structure/powerloader_wreckage
-	name = "\improper Caterpillar P-5000 Work Loader wreckage"
+	name = "Caterpillar P-5000 Work Loader wreckage"
 	desc = "Remains of some unfortunate Power Loader. Completely unrepairable."
 	icon = 'icons/obj/powerloader.dmi'
 	icon_state = "wreck"

@@ -14,7 +14,6 @@
 					continue outer_loop
 			hive.living_xeno_queen = null
 
-
 /mob/living/carbon/Xenomorph/Queen
 	caste = "Queen"
 	name = "Queen"
@@ -30,8 +29,8 @@
 	attack_sound = null
 	friendly = "nuzzles"
 	wall_smash = 0
-	health = 450
-	maxHealth = 450
+	health = 200
+	maxHealth = 200
 	amount_grown = 0
 	max_grown = 10
 	plasma_stored = 500
@@ -76,6 +75,7 @@
 		/datum/action/xeno_action/psychic_whisper,
 		/datum/action/xeno_action/shift_spits,
 		/datum/action/xeno_action/activable/xeno_spit,
+		/datum/action/xeno_action/ready_charge,
 		)
 	inherent_verbs = list(
 		/mob/living/carbon/Xenomorph/proc/claw_toggle,
@@ -151,7 +151,7 @@
 							if(new_xeno.client)
 								new_xeno.client.change_view(world.view)
 
-							new_xeno << "<span class='xenoannounce'>You are a xenomorph larva awakened from slumber!</span>"
+							to_chat(new_xeno, "<span class='xenoannounce'>You are a xenomorph larva awakened from slumber!</span>")
 							new_xeno << sound('sound/effects/xeno_newlarva.ogg')
 
 							ticker.mode.stored_larva--
@@ -174,19 +174,19 @@
 /mob/living/carbon/Xenomorph/Queen/Bump(atom/A, yes)
 	set waitfor = 0
 
-	//if(charge_speed < charge_speed_buildup * charge_turfs_to_charge || !is_charging) return ..()
+	if(charge_speed < charge_speed_buildup * charge_turfs_to_charge || !is_charging) return ..()
 
 	if(stat || !A || !istype(A) || A == src || !yes) return FALSE
 
 	if(now_pushing) return FALSE//Just a plain ol turf, let's return.
 
-	/*if(dir != charge_dir) //We aren't facing the way we're charging.
+	if(dir != charge_dir) //We aren't facing the way we're charging.
 		stop_momentum()
 		return ..()
 
 	if(!handle_collision(A))
 		if(!A.charge_act(src)) //charge_act is depricated and only here to handle cases that have not been refactored as of yet.
-			return ..()*/
+			return ..()
 
 	var/turf/T = get_step(src, dir)
 	if(!T || !get_step_to(src, T)) //If it still exists, try to push it.
@@ -212,7 +212,7 @@
 	set desc = "Give some specific orders to the hive. They can see this on the status pane."
 
 	if(hivenumber == XENO_HIVE_CORRUPTED)
-		src << "<span class='warning'>Only your masters can decide this!</span>"
+		to_chat(src, "<span class='warning'>Only your masters can decide this!</span>")
 		return
 
 	if(!check_state())
@@ -222,7 +222,8 @@
 	if(last_special > world.time)
 		return
 	plasma_stored -= 50
-	var/txt = copytext(sanitize(input("Set the hive's orders to what? Leave blank to clear it.", "Hive Orders","")), 1, MAX_MESSAGE_LEN)
+	var/txt = copytext(sanitize(input("Set the hive's orders to what? Leave blank to clear it.", "Hive Orders", null) as text), 1, MAX_MESSAGE_LEN)
+
 
 	var/datum/hive_status/hive
 	if(hivenumber && hivenumber <= hive_datum.len)
@@ -245,26 +246,26 @@
 		return
 	plasma_stored -= 50
 	if(health <= 0)
-		src << "<span class='warning'>You can't do that while unconcious.</span>"
+		to_chat(src, "<span class='warning'>You can't do that while unconcious.</span>")
 		return 0
 	var/input = stripped_multiline_input(src, "This message will be broadcast throughout the hive.", "Word of the Queen", "")
 	if(!input)
 		return
 
 	var/queensWord = "<br><h2 class='alert'>The words of the queen reverberate in your head...</h2>"
-	queensWord += "<br><span class='alert'>[input]</span><br>"
+	queensWord += "<br><span class='alert'>[sanitize(input)]</span><br>"
 
 	if(ticker && ticker.mode)
 		for(var/datum/mind/L in ticker.mode.xenomorphs)
 			var/mob/living/carbon/Xenomorph/X = L.current
 			if(X && X.client && istype(X) && !X.stat && hivenumber == X.hivenumber)
 				X << sound(get_sfx("queen"),wait = 0,volume = 50)
-				X << "[queensWord]"
+				to_chat(X, "[queensWord]")
 
 	spawn(0)
 		for(var/mob/dead/observer/G in player_list)
 			G << sound(get_sfx("queen"),wait = 0,volume = 50)
-			G << "[queensWord]"
+			to_chat(G, "[queensWord]")
 
 	log_admin("[key_name(src)] has created a Word of the Queen report:")
 	log_admin("[queensWord]")
@@ -277,15 +278,15 @@
 	set category = "Alien"
 
 	if(hivenumber == XENO_HIVE_CORRUPTED)
-		src << "<span class='warning'>Only your masters can decide this!</span>"
+		to_chat(src, "<span class='warning'>Only your masters can decide this!</span>")
 		return
 
 	if(stat)
-		src << "<span class='warning'>You can't do that now.</span>"
+		to_chat(src, "<span class='warning'>You can't do that now.</span>")
 		return
 
 	if(pslash_delay)
-		src << "<span class='warning'>You must wait a bit before you can toggle this again.</span>"
+		to_chat(src, "<span class='warning'>You must wait a bit before you can toggle this again.</span>")
 		return
 
 	spawn(300)
@@ -301,15 +302,15 @@
 	var/choice = input("Choose which level of slashing hosts to permit to your hive.","Harming") as null|anything in list("Allowed", "Restricted - Less Damage", "Forbidden")
 
 	if(choice == "Allowed")
-		src << "<span class='xenonotice'>You allow slashing.</span>"
+		to_chat(src, "<span class='xenonotice'>You allow slashing.</span>")
 		xeno_message("The Queen has <b>permitted</b> the harming of hosts! Go hog wild!")
 		hive.slashing_allowed = 1
 	else if(choice == "Restricted - Less Damage")
-		src << "<span class='xenonotice'>You restrict slashing.</span>"
+		to_chat(src, "<span class='xenonotice'>You restrict slashing.</span>")
 		xeno_message("The Queen has <b>restricted</b> the harming of hosts. You will only slash when hurt.")
 		hive.slashing_allowed = 2
 	else if(choice == "Forbidden")
-		src << "<span class='xenonotice'>You forbid slashing entirely.</span>"
+		to_chat(src, "<span class='xenonotice'>You forbid slashing entirely.</span>")
 		xeno_message("The Queen has <b>forbidden</b> the harming of hosts. You can no longer slash your enemies.")
 		hive.slashing_allowed = 0
 
@@ -318,7 +319,7 @@
 		return
 
 	if(has_screeched)
-		src << "<span class='warning'>You are not ready to screech again.</span>"
+		to_chat(src, "<span class='warning'>You are not ready to screech again.</span>")
 		return
 
 	if(!check_plasma(250))
@@ -339,7 +340,7 @@
 	use_plasma(250)
 	spawn(500)
 		has_screeched = 0
-		src << "<span class='warning'>You feel your throat muscles vibrate. You are ready to screech again.</span>"
+		to_chat(src, "<span class='warning'>You feel your throat muscles vibrate. You are ready to screech again.</span>")
 		for(var/Z in actions)
 			var/datum/action/A = Z
 			A.update_button_icon()
@@ -360,14 +361,14 @@
 			continue
 		var/dist = get_dist(src,M)
 		if(dist <= 4)
-			M << "<span class='danger'>An ear-splitting guttural roar shakes the ground beneath your feet!</span>"
+			to_chat(M, "<span class='danger'>An ear-splitting guttural roar shakes the ground beneath your feet!</span>")
 			M.stunned += 4 //Seems the effect lasts between 3-8 seconds.
 			M.KnockDown(4)
 			if(!M.ear_deaf)
 				M.ear_deaf += 8 //Deafens them temporarily
 		else if(dist >= 5 && dist < 7)
 			M.stunned += 3
-			M << "<span class='danger'>The roar shakes your body to the core, freezing you in place!</span>"
+			to_chat(M, "<span class='danger'>The roar shakes your body to the core, freezing you in place!</span>")
 
 /mob/living/carbon/Xenomorph/Queen/proc/queen_gut(atom/A)
 
@@ -394,16 +395,16 @@
 		var/mob/living/carbon/human/H = victim
 		if(H.status_flags & XENO_HOST)
 			if(victim.stat != DEAD) //Not dead yet.
-				src << "<span class='xenowarning'>The host and child are still alive!</span>"
+				to_chat(src, "<span class='xenowarning'>The host and child are still alive!</span>")
 				return
 			else if(istype(H) && ( world.time <= H.timeofdeath + H.revive_grace_period )) //Dead, but the host can still hatch, possibly.
-				src << "<span class='xenowarning'>The child may still hatch! Not yet!</span>"
+				to_chat(src, "<span class='xenowarning'>The child may still hatch! Not yet!</span>")
 				return
 
 	if(isXeno(victim))
 		var/mob/living/carbon/Xenomorph/xeno = victim
 		if(hivenumber == xeno.hivenumber)
-			src << "<span class='warning'>You can't bring yourself to harm a fellow sister to this magnitude.</span>"
+			to_chat(src, "<span class='warning'>You can't bring yourself to harm a fellow sister to this magnitude.</span>")
 			return
 
 	var/turf/cur_loc = victim.loc
@@ -428,8 +429,7 @@
 		visible_message("<span class='xenodanger'>\The [src] viciously smashes and wrenches \the [victim] apart!</span>", \
 		"<span class='xenodanger'>You suddenly unleash pure anger on \the [victim], instantly wrenching \him apart!</span>")
 		emote("roar")
-		attack_log += text("\[[time_stamp()]\] <font color='red'>gibbed [victim.name] ([victim.ckey])</font>")
-		victim.attack_log += text("\[[time_stamp()]\] <font color='orange'>was gibbed by [name] ([ckey])</font>")
+		log_combat(victim, src, "gibbed")
 		victim.gib() //Splut
 		stop_pulling()
 
@@ -509,6 +509,7 @@
 			/datum/action/xeno_action/psychic_whisper,
 			/datum/action/xeno_action/shift_spits,
 			/datum/action/xeno_action/activable/xeno_spit,
+			/datum/action/xeno_action/ready_charge,
 			)
 
 		for(var/path in mobile_abilities)
@@ -569,10 +570,11 @@
 			icon_state = "Queen Knocked Down"
 	else
 		if(m_intent == MOVE_INTENT_RUN)
-			/*if(charge_speed > charge_speed_buildup * charge_turfs_to_charge) //Let it build up a bit so we're not changing icons every single turf
+			if(charge_speed > charge_speed_buildup * charge_turfs_to_charge)
 				icon_state = "Queen Charging"
-			else*/
-			icon_state = "Queen Running"
+			else
+				icon_state = "Queen Running"
+
 		else
 			icon_state = "Queen Walking"
 

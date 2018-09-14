@@ -29,7 +29,7 @@
 
 	examine(mob/user)
 		..()
-		user << "The service panel is [src.open ? "open" : "closed"]."
+		to_chat(user, "The service panel is [src.open ? "open" : "closed"].")
 
 	attack_paw(mob/user as mob)
 		return attack_hand(user)
@@ -43,7 +43,7 @@
 				src.overlays = null
 				overlays += image('icons/obj/items/storage/storage.dmi', icon_locking)
 				locked = 0
-				user << "You short out the lock on [src]."
+				to_chat(user, "You short out the lock on [src].")
 				return
 
 			if (istype(W, /obj/item/tool/screwdriver))
@@ -152,7 +152,7 @@
 
 	attack_hand(mob/user as mob)
 		if ((src.loc == user) && (src.locked == 1))
-			usr << "\red [src] is locked and cannot be opened!"
+			to_chat(usr, "\red [src] is locked and cannot be opened!")
 		else if ((src.loc == user) && (!src.locked))
 			src.open(usr)
 		else
@@ -166,15 +166,12 @@
 	//I consider this worthless but it isn't my code so whatever.  Remove or uncomment.
 	/*attack(mob/M as mob, mob/living/user as mob)
 		if ((CLUMSY in user.mutations) && prob(50))
-			user << "\red The [src] slips out of your hand and hits your head."
+			to_chat(user, "\red The [src] slips out of your hand and hits your head.")
 			user.take_limb_damage(10)
 			user.KnockOut(2)
 			return
 
-		M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been attacked with [src.name] by [user.name] ([user.ckey])</font>")
-		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Used the [src.name] to attack [M.name] ([M.ckey])</font>")
-
-		log_attack("<font color='red'>[user.name] ([user.ckey]) attacked [M.name] ([M.ckey]) with [src.name] (INTENT: [uppertext(user.a_intent)])</font>")
+		log_combat(user, M, "attack", src, "(INTENT: [uppertext(user.a_intent)])")
 
 		var/t = user:zone_selected
 		if (t == "head")
@@ -183,7 +180,7 @@
 				if (H.stat < 2 && H.health < 50 && prob(90))
 				// ******* Check
 					if (istype(H, /obj/item/clothing/head) && H.flags & 8 && prob(80))
-						H << "\red The helmet protects you from being hit hard in the head!"
+						to_chat(H, "\red The helmet protects you from being hit hard in the head!")
 						return
 					var/time = rand(2, 6)
 					if (prob(75))
@@ -194,7 +191,7 @@
 					for(var/mob/O in viewers(H, null))
 						O.show_message(text("\red <B>[] has been knocked unconscious!</B>", H), 1, "\red You hear someone fall.", 2)
 				else
-					H << text("\red [] tried to knock you unconcious!",user)
+					to_chat(H, text("\red [] tried to knock you unconcious!",user))
 					H.eye_blurry += 3
 
 		return*/

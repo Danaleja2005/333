@@ -68,14 +68,6 @@ You are also in charge of communicating with command and letting them know about
 		. = ..() + {"\nYou have the equipment and skill to build fortifications, reroute power lines, and bunker down.
 Your squaddies will look to you when it comes to construction in the field of battle."}
 
-	get_total_positions(var/latejoin=0)
-		var/slots = engi_slot_formula(get_total_marines())
-		if(latejoin)
-			for(var/datum/squad/sq in RoleAuthority.squads)
-				if(sq)
-					sq.max_engineers = slots
-		return (slots*4)
-
 /datum/job/marine/engineer/equipped
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 
@@ -100,14 +92,6 @@ Your squaddies will look to you when it comes to construction in the field of ba
 		. = ..() + {"\nYou must tend the wounds of your squad mates and make sure they are healthy and active.
 You may not be a fully-fledged doctor, but you stand between life and death when it matters."}
 
-	get_total_positions(var/latejoin=0)
-		var/slots = medic_slot_formula(get_total_marines())
-		if(latejoin)
-			for(var/datum/squad/sq in RoleAuthority.squads)
-				if(sq)
-					sq.max_medics = slots
-		return (slots*4)
-
 /datum/job/marine/medic/equipped
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 
@@ -116,8 +100,8 @@ You may not be a fully-fledged doctor, but you stand between life and death when
 	comm_title = "Spc"
 	paygrade = "E5"
 	flag = ROLE_MARINE_SPECIALIST
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	minimal_access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	minimal_player_age = 7
@@ -145,8 +129,8 @@ You can serve a variety of roles, so choose carefully."}
 	comm_title = "LCpl"
 	paygrade = "E3"
 	flag = ROLE_MARINE_SMARTGUN
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	minimal_access = list(ACCESS_IFF_MARINE, ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	minimal_player_age = 7

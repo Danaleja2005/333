@@ -39,11 +39,11 @@
 			else return
 
 			if(!hive.slashing_allowed && !M.is_intelligent)
-				M << "<span class='warning'>Slashing is currently <b>forbidden</b> by the Queen. You refuse to slash [src].</span>"
+				to_chat(M, "<span class='warning'>Slashing is currently <b>forbidden</b> by the Queen. You refuse to slash [src].</span>")
 				return FALSE
 
 			if(stat == DEAD)
-				M << "<span class='warning'>[src] is dead, why would you want to touch it?</span>"
+				to_chat(M, "<span class='warning'>[src] is dead, why would you want to touch it?</span>")
 				return FALSE
 
 			if(!M.is_intelligent)
@@ -51,17 +51,17 @@
 					if(status_flags & XENO_HOST)
 						for(var/obj/item/alien_embryo/embryo in src)
 							if(embryo.hivenumber == M.hivenumber)
-								M << "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. There is a host inside!</span>"
+								to_chat(M, "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. There is a host inside!</span>")
 								return FALSE
 
 					if(M.health > round(2 * M.maxHealth / 3)) //Note : Under 66 % health
-						M << "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. You are not yet injured enough to overcome the Queen's orders.</span>"
+						to_chat(M, "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. You are not yet injured enough to overcome the Queen's orders.</span>")
 						return FALSE
 
 				else if(istype(buckled, /obj/structure/bed/nest) && (status_flags & XENO_HOST))
 					for(var/obj/item/alien_embryo/embryo in src)
 						if(embryo.hivenumber == M.hivenumber)
-							M << "<span class='warning'>You should not harm this host! It has a sister inside.</span>"
+							to_chat(M, "<span class='warning'>You should not harm this host! It has a sister inside.</span>")
 							return FALSE
 
 			if(check_shields(0, M.name) && prob(66)) //Bit of a bonus
@@ -130,16 +130,12 @@
 			//Logging, including anti-rulebreak logging
 			if(src.status_flags & XENO_HOST && src.stat != DEAD)
 				if(istype(src.buckled, /obj/structure/bed/nest)) //Host was buckled to nest while infected, this is a rule break
-					src.attack_log += text("\[[time_stamp()]\] <font color='orange'><B>was slashed by [M.name] ([M.ckey]) while they were infected and nested</B></font>")
-					M.attack_log += text("\[[time_stamp()]\] <font color='red'><B>slashed [src.name] ([src.ckey]) while they were infected and nested</B></font>")
+					log_combat(M, src, "slashed", addition="while they were infected and nested")
 					msg_admin_ff("[key_name(M)] slashed [key_name(src)] while they were infected and nested.") //This is a blatant rulebreak, so warn the admins
 				else //Host might be rogue, needs further investigation
-					src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slashed by [M.name] ([M.ckey]) while they were infected</font>")
-					M.attack_log += text("\[[time_stamp()]\] <font color='red'>slashed [src.name] ([src.ckey]) while they were infected</font>")
+					log_combat(M, src, "slashed", addition="while they were infected")
 			else //Normal xenomorph friendship with benefits
-				src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slashed by [M.name] ([M.ckey])</font>")
-				M.attack_log += text("\[[time_stamp()]\] <font color='red'>slashed [src.name] ([src.ckey])</font>")
-			log_attack("[M.name] ([M.ckey]) slashed [src.name] ([src.ckey])")
+				log_combat(M, src, "slashed")
 
 			if (M.caste == "Ravager")
 				var/mob/living/carbon/Xenomorph/Ravager/R = M
@@ -151,7 +147,7 @@
 
 		if("disarm")
 			if(M.legcuffed && isYautja(src))
-				M << "<span class='xenodanger'>You don't have the dexterity to tackle the headhunter with that thing on your leg!</span>"
+				to_chat(M, "<span class='xenodanger'>You don't have the dexterity to tackle the headhunter with that thing on your leg!</span>")
 				return 0
 			M.animation_attack_on(src)
 			if(check_shields(0, M.name) && prob(66)) //Bit of a bonus
@@ -239,17 +235,17 @@
 					if(status_flags & XENO_HOST)
 						for(var/obj/item/alien_embryo/embryo in src)
 							if(embryo.hivenumber == M.hivenumber)
-								M << "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. There is a host inside!</span>"
+								to_chat(M, "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. There is a host inside!</span>")
 								return FALSE
 
 					if(M.health > round(2 * M.maxHealth / 3)) //Note : Under 66 % health
-						M << "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. You are not yet injured enough to overcome the Queen's orders.</span>"
+						to_chat(M, "<span class='warning'>You try to slash [src], but find you <B>cannot</B>. You are not yet injured enough to overcome the Queen's orders.</span>")
 						return FALSE
 
 				else if(istype(buckled, /obj/structure/bed/nest) && (status_flags & XENO_HOST))
 					for(var/obj/item/alien_embryo/embryo in src)
 						if(embryo.hivenumber == M.hivenumber)
-							M << "<span class='warning'>You should not harm this host! It has a sister inside.</span>"
+							to_chat(M, "<span class='warning'>You should not harm this host! It has a sister inside.</span>")
 							return FALSE
 
 			if(issilicon(src) && stat != DEAD) //A bit of visual flavor for attacking Cyborgs. Sparks!
@@ -278,9 +274,7 @@
 
 			M.visible_message("<span class='danger'>\The [M] slashes [src]!</span>", \
 			"<span class='danger'>You slash [src]!</span>", null, 5)
-			src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was slashed by [M.name] ([M.ckey])</font>")
-			M.attack_log += text("\[[time_stamp()]\] <font color='red'>slashed [src.name] ([src.ckey])</font>")
-			log_attack("[M.name] ([M.ckey]) slashed [src.name] ([src.ckey])")
+			log_combat(M, src, "slashed")
 
 			playsound(loc, "alien_claw_flesh", 25, 1)
 			apply_damage(damage, BRUTE)
@@ -448,7 +442,7 @@
 
 //Slashing mechas
 /obj/mecha/attack_alien(mob/living/carbon/Xenomorph/M)
-	log_message("Attack by claw. Attacker - [M].", 1)
+	log_message("Attack by claw. Attacker - [M].", color="red")
 
 	if(!prob(deflect_chance))
 		take_damage((rand(M.melee_damage_lower, M.melee_damage_upper)/2))
@@ -525,15 +519,15 @@
 		if(shock(M, 70))
 			return
 	if(locked)
-		M << "<span class='warning'>\The [src] is bolted down tight.</span>"
+		to_chat(M, "<span class='warning'>\The [src] is bolted down tight.</span>")
 		return 0
 	if(welded)
-		M << "<span class='warning'>\The [src] is welded shut.</span>"
+		to_chat(M, "<span class='warning'>\The [src] is welded shut.</span>")
 		return 0
 	if(!istype(cur_loc))
 		return 0 //Some basic logic here
 	if(!density)
-		M << "<span class='warning'>\The [src] is already open!</span>"
+		to_chat(M, "<span class='warning'>\The [src] is already open!</span>")
 		return 0
 
 	if(M.action_busy)
@@ -552,10 +546,10 @@
 		if(M.lying)
 			return 0
 		if(locked)
-			M << "<span class='warning'>\The [src] is bolted down tight.</span>"
+			to_chat(M, "<span class='warning'>\The [src] is bolted down tight.</span>")
 			return 0
 		if(welded)
-			M << "<span class='warning'>\The [src] is welded shut.</span>"
+			to_chat(M, "<span class='warning'>\The [src] is welded shut.</span>")
 			return 0
 		if(density) //Make sure it's still closed
 			spawn(0)
@@ -566,10 +560,10 @@
 /obj/machinery/door/airlock/attack_larva(mob/living/carbon/Xenomorph/Larva/M)
 	for(var/atom/movable/AM in get_turf(src))
 		if(AM != src && AM.density && !AM.CanPass(M, M.loc))
-			M << "<span class='warning'>\The [AM] prevents you from squeezing under \the [src]!</span>"
+			to_chat(M, "<span class='warning'>\The [AM] prevents you from squeezing under \the [src]!</span>")
 			return
 	if(locked || welded) //Can't pass through airlocks that have been bolted down or welded
-		M << "<span class='warning'>\The [src] is locked down tight. You can't squeeze underneath!</span>"
+		to_chat(M, "<span class='warning'>\The [src] is locked down tight. You can't squeeze underneath!</span>")
 		return
 	M.visible_message("<span class='warning'>\The [M] scuttles underneath \the [src]!</span>", \
 	"<span class='warning'>You squeeze and scuttle underneath \the [src].</span>", null, 5)
@@ -579,12 +573,12 @@
 /obj/machinery/door/firedoor/attack_alien(mob/living/carbon/Xenomorph/M)
 	var/turf/cur_loc = M.loc
 	if(blocked)
-		M << "<span class='warning'>\The [src] is welded shut.</span>"
+		to_chat(M, "<span class='warning'>\The [src] is welded shut.</span>")
 		return 0
 	if(!istype(cur_loc))
 		return 0 //Some basic logic here
 	if(!density)
-		M << "<span class='warning'>\The [src] is already open!</span>"
+		to_chat(M, "<span class='warning'>\The [src] is already open!</span>")
 		return 0
 
 	playsound(src.loc, 'sound/effects/metal_creaking.ogg', 25, 1)
@@ -595,7 +589,7 @@
 		if(M.loc != cur_loc)
 			return 0 //Make sure we're still there
 		if(blocked)
-			M << "<span class='warning'>\The [src] is welded shut.</span>"
+			to_chat(M, "<span class='warning'>\The [src] is welded shut.</span>")
 			return 0
 		if(density) //Make sure it's still closed
 			spawn(0)
@@ -640,21 +634,21 @@
 //Xenomorphs can't use machinery, not even the "intelligent" ones
 //Exception is Queen and shuttles, because plot power
 /obj/machinery/attack_alien(mob/living/carbon/Xenomorph/M)
-	M << "<span class='warning'>You stare at \the [src] cluelessly.</span>"
+	to_chat(M, "<span class='warning'>You stare at \the [src] cluelessly.</span>")
 
 /datum/shuttle/ferry/marine/proc/hijack(mob/living/carbon/Xenomorph/M)
 	if(!queen_locked) //we have not hijacked it yet
 		if(world.time < SHUTTLE_LOCK_TIME_LOCK)
-			M << "<span class='xenodanger'>You can't mobilize the strength to hijack the shuttle yet. Please wait another [round((SHUTTLE_LOCK_TIME_LOCK-world.time)/600)] minutes before trying again.</span>"
+			to_chat(M, "<span class='xenodanger'>You can't mobilize the strength to hijack the shuttle yet. Please wait another [round((SHUTTLE_LOCK_TIME_LOCK-world.time)/600)] minutes before trying again.</span>")
 			return
-		M << "<span class='xenonotice'>You interact with the machine and disable remote control.</span>"
+		to_chat(M, "<span class='xenonotice'>You interact with the machine and disable remote control.</span>")
 		xeno_message("<span class='xenoannounce'>We have wrested away remote control of the metal bird! Rejoice!</span>",3,M.hivenumber)
 		last_locked = world.time
 		queen_locked = 1
 
 /datum/shuttle/ferry/marine/proc/door_override(mob/living/carbon/Xenomorph/M)
 	if(!door_override)
-		M << "<span class='xenonotice'>You override the doors.</span>"
+		to_chat(M, "<span class='xenonotice'>You override the doors.</span>")
 		xeno_message("<span class='xenoannounce'>The doors of the metal bird have been overridden! Rejoice!</span>",3,M.hivenumber)
 		last_door_override = world.time
 		door_override = 1
@@ -739,10 +733,10 @@
 
 /obj/machinery/colony_floodlight/attack_alien(mob/living/carbon/Xenomorph/M)
 	if(!is_lit)
-		M << "Why bother? It's just some weird metal thing."
+		to_chat(M, "Why bother? It's just some weird metal thing.")
 		return 0
 	else if(damaged)
-		M << "It's already damaged."
+		to_chat(M, "It's already damaged.")
 		return 0
 	else
 		M.animation_attack_on(src)
@@ -767,7 +761,7 @@
 	if(M.a_intent == "grab")
 
 		if(!slayer)
-			M << "<span class='warning'>There is nothing to clear out!</span>"
+			to_chat(M, "<span class='warning'>There is nothing to clear out!</span>")
 			return 0
 
 		M.visible_message("<span class='notice'>\The [M] starts clearing out \the [src].</span>", \
@@ -817,7 +811,7 @@
 
 /obj/structure/girder/attack_alien(mob/living/carbon/Xenomorph/M)
 	if(M.mob_size != MOB_SIZE_BIG || unacidable)
-		M << "<span class='warning'>Your claws aren't sharp enough to damage \the [src].</span>"
+		to_chat(M, "<span class='warning'>Your claws aren't sharp enough to damage \the [src].</span>")
 		return 0
 	else
 		M.animation_attack_on(src)
@@ -834,7 +828,7 @@
 
 /obj/machinery/vending/attack_alien(mob/living/carbon/Xenomorph/M)
 	if(tipped_level)
-		M << "<span class='warning'>There's no reason to bother with that old piece of trash.</span>"
+		to_chat(M, "<span class='warning'>There's no reason to bother with that old piece of trash.</span>")
 		return 0
 
 	if(M.a_intent == "hurt")

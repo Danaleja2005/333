@@ -8,7 +8,7 @@
 			return
 		src << link(config.wikiurl)
 	else
-		src << "\red The wiki URL is not set in the server configuration."
+		to_chat(src, "\red The wiki URL is not set in the server configuration.")
 	return
 
 /client/verb/forum()
@@ -20,7 +20,7 @@
 			return
 		src << link(config.forumurl)
 	else
-		src << "\red The forum URL is not set in the server configuration."
+		to_chat(src, "\red The forum URL is not set in the server configuration.")
 	return
 
 /client/verb/rules()
@@ -32,15 +32,15 @@
 			return
 		src << link(config.rulesurl)
 	else
-		src << "\red The rules URL is not set in the server configuration."
+		to_chat(src, "\red The rules URL is not set in the server configuration.")
 	return
 
-/client/verb/patreon()
-	set name = "Donat"
-	set desc = "Like our server? Buy us and get satisfaction for your efforts."
+/client/verb/donate()
+	set name = "Donate"
+	set desc = "Like our server? Buy us a beer and get some custom-made items."
 	set hidden = 1
 
-	src << "<br>View our donation page for more info: https://.<br>"
+	src << "<br>View our donation page for more info: https://cm-ss13.com/viewtopic.php?f=119&t=5978.<br>"
 	return
 
 /client/verb/submitbug()
@@ -50,7 +50,7 @@
 
 	if(alert("Please search for the bug first to make sure you aren't posting a duplicate.",,"Ok","Cancel")=="Cancel")
 		return
-	src << link("https://")
+	src << link("https://gitlab.com/cmdevs/ColonialMarines/issues")
 	return
 
 /client/verb/hotkeys_help()

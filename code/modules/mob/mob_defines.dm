@@ -26,7 +26,7 @@
 	var/computer_id = null //to track the players
 	var/lastattacker = null
 	var/lastattacked = null
-	var/attack_log = list( )
+	var/list/logging = list()
 	var/atom/movable/interactee //the thing that the mob is currently interacting with (e.g. a computer, another mob (stripping a mob), manning a hmg)
 	var/poll_answer = 0.0
 	var/sdisabilities = 0	//Carbon
@@ -121,6 +121,8 @@
 	var/const/blindness = 1//Carbon
 	var/const/deafness = 2//Carbon
 	var/const/muteness = 4//Carbon
+
+	var/artmod_use = 0 // Artillery Module Night Vision check.
 
 
 	var/datum/dna/dna = null//Carbon

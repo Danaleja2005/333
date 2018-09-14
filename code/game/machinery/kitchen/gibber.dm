@@ -74,30 +74,30 @@
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(operating)
-		user << "\red It's locked and running"
+		to_chat(user, "\red It's locked and running")
 		return
 	else
 		src.startgibbing(user)
 
 /obj/machinery/gibber/attackby(obj/item/grab/G as obj, mob/user as mob)
 	if(src.occupant)
-		user << "<span class='warning'>The gibber is full, empty it first!</span>"
+		to_chat(user, "<span class='warning'>The gibber is full, empty it first!</span>")
 		return
 
 	if( !(istype(G, /obj/item/grab)) )
-		user << "<span class='warning'>This item is not suitable for the gibber!</span>"
+		to_chat(user, "<span class='warning'>This item is not suitable for the gibber!</span>")
 		return
 
 	if( !iscarbon(G.grabbed_thing) && !istype(G.grabbed_thing, /mob/living/simple_animal) )
-		user << "<span class='warning'>This item is not suitable for the gibber!</span>"
+		to_chat(user, "<span class='warning'>This item is not suitable for the gibber!</span>")
 		return
 	var/mob/living/M = G.grabbed_thing
 	if(user.grab_level < GRAB_AGGRESSIVE)
-		user << "<span class='warning'>You need a better grip to do that!</span>"
+		to_chat(user, "<span class='warning'>You need a better grip to do that!</span>")
 		return
 
 	if(M.abiotic(1))
-		user << "<span class='warning'>Subject may not have abiotic items on.</span>"
+		to_chat(user, "<span class='warning'>Subject may not have abiotic items on.</span>")
 		return
 
 	user.visible_message("<span class='danger'>[user] starts to put [M] into the gibber!</span>")
@@ -162,8 +162,8 @@
 			src.occupant.reagents.trans_to(newmeat, round (sourcetotalreagents / totalslabs, 1)) // Transfer all the reagents from the
 			allmeat[i] = newmeat
 
-		src.occupant.attack_log += "\[[time_stamp()]\] Was gibbed by <b>[user]/[user.ckey]</b>" //One shall not simply gib a mob unnoticed!
-		user.attack_log += "\[[time_stamp()]\] Gibbed <b>[src.occupant]/[src.occupant.ckey]</b>"
+
+		log_combat(user, src.occupant, "gibbed") //One shall not simply gib a mob unnoticed!
 		msg_admin_attack("[user.name] ([user.ckey]) gibbed [src.occupant] ([src.occupant.ckey]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
 
 		src.occupant.death(1)
@@ -196,13 +196,12 @@
 
 			allmeat[i] = newmeat
 
-		if(src.occupant.client) // Gibbed a cow with a client in it? log that shit
-			src.occupant.attack_log += "\[[time_stamp()]\] Was gibbed by <b>[user]/[user.ckey]</b>"
-			user.attack_log += "\[[time_stamp()]\] Gibbed <b>[src.occupant]/[src.occupant.ckey]</b>"
+		if(occupant.client) // Gibbed a cow with a client in it? log that shit
+			log_combat(occupant, user, "gibbed")
 			msg_admin_attack("\[[time_stamp()]\] <b>[key_name(user)]</b> gibbed <b>[key_name(src.occupant)]</b>")
 
-		src.occupant.death(1)
-		src.occupant.ghostize()
+		occupant.death(1)
+		occupant.ghostize()
 
 	cdel(occupant)
 	occupant = null

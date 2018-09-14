@@ -16,7 +16,7 @@
 
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 
-	log_say("[key_name(speaker)] : ([name]) [message]")
+	speaker.log_talk(message, LOG_SAY)
 
 	for(var/mob/player in player_list)
 
@@ -30,7 +30,7 @@
 		if(understood)
 			if(!speaker_mask) speaker_mask = speaker.name
 			var/msg = "<i><span class='game say'>[name], <span class='name'>[speaker_mask]</span> <span class='message'>[speech_verb], \"<span class='[colour]'>[message]</span><span class='message'>\"</span></span></i>"
-			player << "[msg]"
+			to_chat(player, "[msg]")
 
 /datum/language/proc/check_special_condition(var/mob/other)
 	return 1
