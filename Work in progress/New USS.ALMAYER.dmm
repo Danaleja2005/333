@@ -1,105 +1,380 @@
-"a" = (/turf/open/space,/area/space)
-"b" = (/turf/closed/wall/r_wall,/area/space)
+"aa" = (/turf/open/space,/area/space)
+"ab" = (/turf/closed/wall/almayer/outer,/area/space)
+"ac" = (/turf/closed/wall/almayer,/area/space)
+"ad" = (/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/hull/lower_hull)
+"ae" = (/turf/open/floor/almayer,/area/space)
+"af" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"ag" = (/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/shuttle/distress/arrive_3)
+"ah" = (/obj/machinery/door/airlock/almayer/secure{dir = 4; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"ai" = (/obj/machinery/door/airlock/almayer/secure{dir = 2; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"aj" = (/turf/closed/wall/almayer,/area/almayer/engineering/engine_core)
+"ak" = (/obj/effect/step_trigger/teleporter/random{affect_ghosts = 1; name = "tele_ground1"; teleport_x = 180; teleport_x_offset = 200; teleport_y = 50; teleport_y_offset = 80; teleport_z = 1; teleport_z_offset = 1},/turf/open/space,/area/space)
+"al" = (/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/space)
+"am" = (/turf/closed/wall/almayer,/area/almayer/engineering/lower_engineering)
+"an" = (/obj/machinery/door/airlock/almayer/maint{dir = 2},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"ao" = (/turf/closed/wall/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"ap" = (/turf/open/floor/plating/plating_catwalk,/area/space)
+"aq" = (/obj/machinery/alarm/almayer,/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"ar" = (/obj/machinery/power/apc/almayer{dir = 1},/obj/structure/cable/yellow{d2 = 2; icon_state = "0-2"},/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"as" = (/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"at" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/closed/wall/almayer,/area/almayer/engineering/engine_core)
+"au" = (/obj/effect/landmark/start{name = "JoinLate"},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engineering)
+"av" = (/obj/effect/landmark{name = "JoinLate"},/obj/machinery/alarm/almayer,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"aw" = (/obj/machinery/atmospherics/unary/vent_pump,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"ax" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (SOUTHEAST)"; icon_state = "intact-scrubbers"; dir = 6},/obj/machinery/power/apc/almayer{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"ay" = (/obj/machinery/light{dir = 1},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"az" = (/turf/open/floor/almayer,/area/almayer/engineering/lower_engineering)
+"aA" = (/obj/structure/table/almayer,/obj/item/clipboard,/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/obj/machinery/power/apc/almayer{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engine_monitoring)
+"aB" = (/obj/structure/table/almayer,/obj/item/tool/crowbar,/obj/item/tool/wrench,/obj/machinery/alarm/almayer,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"aC" = (/obj/structure/table/almayer,/obj/item/tool/wirecutters,/obj/machinery/light{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"aD" = (/obj/structure/table/almayer,/obj/machinery/computer/station_alert,/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/lower_engine_monitoring)
+"aE" = (/obj/structure/closet/radiation,/turf/open/floor/almayer{tag = "icon-cargo (SOUTHWEST)"; icon_state = "cargo"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"aF" = (/obj/structure/closet/toolcloset,/turf/open/floor/almayer{tag = "icon-cargo (SOUTHWEST)"; icon_state = "cargo"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"aG" = (/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engine_core)
+"aH" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"aI" = (/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"aJ" = (/obj/machinery/light{dir = 1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"aK" = (/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"aL" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"aM" = (/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"aN" = (/obj/machinery/door/airlock/almayer/engineering,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"aO" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"aP" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"aQ" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (NORTH)"; icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (EAST)"; icon_state = "map-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"aR" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"aS" = (/obj/machinery/door/airlock/almayer/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"aT" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (SOUTHWEST)"; icon_state = "intact-supply"; dir = 10},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"aU" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"; layer = 2.1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"aV" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"aW" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"aX" = (/obj/machinery/door/airlock/almayer/maint{name = "\improper Core Hatch"},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"aY" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/light/small,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
+"aZ" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
+"ba" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bb" = (/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"; layer = 2.1},/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (SOUTHEAST)"; icon_state = "intact-supply"; dir = 6},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"bc" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 8; on = 1},/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"bd" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"be" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 15"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bf" = (/obj/effect/decal/warning_stripes{icon_state = "E"; tag = "icon-W"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"bg" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 2"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bh" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"bi" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"bj" = (/obj/effect/landmark/start{name = "JoinLate"},/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engineering)
+"bk" = (/obj/machinery/light,/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
+"bl" = (/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
+"bm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"bn" = (/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engineering)
+"bo" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.2},/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/atmospherics/unary/vent_pump{dir = 1; on = 1},/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"bp" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.2},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
+"bq" = (/obj/machinery/recharge_station,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engine_monitoring)
+"br" = (/obj/machinery/door/airlock/almayer/maint{dir = 2; name = "\improper Core Hatch"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"bs" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engine_core)
+"bt" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (SOUTHWEST)"; icon_state = "intact-scrubbers"; dir = 10},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"bu" = (/obj/structure/table/almayer,/obj/item/fuelCell,/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"bv" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"bw" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 14"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bx" = (/obj/effect/decal/warning_stripes{icon_state = "E"; tag = "icon-W"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"by" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 18"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bz" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"bA" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 12"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bB" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"bC" = (/turf/closed/wall/almayer,/area/almayer/engineering/engineering_workshop)
+"bD" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Engineering Workshop"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engineering_workshop)
+"bE" = (/obj/machinery/power/terminal,/obj/structure/cable/yellow,/turf/open/floor/almayer{icon_plating = "tcomms"; icon_state = "tcomms"},/area/almayer/engineering/lower_engine_monitoring)
+"bF" = (/obj/machinery/alarm/almayer,/obj/machinery/light{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engine_monitoring)
+"bG" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"bH" = (/obj/structure/table/almayer,/obj/item/device/radio,/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/lower_engine_monitoring)
+"bI" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"bJ" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 13"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bK" = (/obj/effect/decal/warning_stripes{icon_state = "E"; tag = "icon-W"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"bL" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 16"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bM" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"bN" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 17"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"bO" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"bP" = (/obj/structure/table/almayer,/obj/item/folder/yellow,/obj/machinery/power/apc/almayer{dir = 1},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/engineering_workshop)
+"bQ" = (/obj/machinery/light{dir = 1},/obj/structure/table/almayer,/obj/item/folder/yellow,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/engineering_workshop)
+"bR" = (/obj/machinery/vending/engineering,/obj/machinery/alarm/almayer,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/engineering_workshop)
+"bS" = (/obj/machinery/vending/engivend,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/engineering_workshop)
+"bT" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engineering_workshop)
+"bU" = (/obj/structure/table/almayer,/obj/item/clipboard,/obj/item/tool/pen,/obj/machinery/vending/wallmed1{pixel_y = 22},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/engineering_workshop)
+"bV" = (/obj/structure/table/almayer,/obj/item/tool/wirecutters,/obj/item/tool/wrench,/obj/item/tool/crowbar,/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/engineering_workshop)
+"bW" = (/obj/machinery/power/smes/buildable{dir = 8},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/turf/open/floor/almayer{icon_plating = "tcomms"; icon_state = "tcomms"},/area/almayer/engineering/lower_engine_monitoring)
+"bX" = (/obj/structure/table/almayer,/obj/machinery/power/apc/almayer{dir = 1},/obj/item/tool/lighter,/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engine_monitoring)
+"bY" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer{tag = "icon-orangecorner (NORTH)"; icon_state = "orangecorner"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"bZ" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/almayer{tag = "icon-orangecorner (EAST)"; icon_state = "orangecorner"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"ca" = (/obj/structure/table/almayer,/obj/item/folder/yellow,/obj/machinery/vending/wallmed1{pixel_y = 22},/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/lower_engine_monitoring)
+"cb" = (/obj/structure/window/framed/almayer,/turf/open/floor/plating,/area/almayer/engineering/lower_engine_monitoring)
+"cc" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cd" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"ce" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cf" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"cg" = (/obj/structure/window/framed/almayer,/turf/open/floor/plating,/area/almayer/engineering/engineering_workshop)
+"ch" = (/obj/structure/table/almayer,/obj/item/tool/lighter,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engineering_workshop)
+"ci" = (/obj/structure/bed/chair/office/dark{dir = 1},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cj" = (/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"ck" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cl" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/structure/table/almayer,/obj/item/storage/toolbox/mechanical,/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cm" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/closed/wall/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cn" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/closed/wall/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"co" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/closed/wall/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cp" = (/obj/structure/table/almayer,/obj/item/tool/crowbar,/obj/item/tool/wirecutters,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"cq" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cr" = (/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cs" = (/obj/structure/table/almayer,/obj/machinery/computer/atmos_alert,/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"ct" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{dir = 1; icon_regular_floor = "cargo_arrow"; icon_state = "cargo_arrow"},/area/almayer/engineering/engine_core)
+"cu" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engine_core)
+"cv" = (/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cw" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/obj/structure/table/almayer,/obj/item/fuelCell,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engine_core)
+"cx" = (/obj/machinery/autolathe,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engineering_workshop)
+"cy" = (/obj/structure/bed/chair/office/dark{dir = 8; layer = 3.25},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cz" = (/obj/structure/table/almayer,/obj/item/storage/toolbox/mechanical,/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cA" = (/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engine_monitoring)
+"cB" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/machinery/light{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"cC" = (/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (SOUTHEAST)"; icon_state = "intact-supply"; dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (SOUTHEAST)"; icon_state = "intact-scrubbers"; dir = 6},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cD" = (/obj/machinery/door/airlock/almayer/engineering,/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"cE" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"cF" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTHWEST)"; icon_state = "intact-scrubbers"; dir = 9},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"cG" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 8; on = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"cH" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"cI" = (/obj/machinery/power/monitor{name = "Core Power Monitoring"},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"cJ" = (/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engine_core)
+"cK" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"; layer = 2.1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cL" = (/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"; layer = 2.1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cM" = (/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable/yellow{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"cN" = (/obj/machinery/fuelcell_recycler,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engine_core)
+"cO" = (/obj/structure/table/almayer,/obj/item/tool/crowbar,/obj/item/tool/weldingtool,/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engineering_workshop)
+"cP" = (/obj/structure/bed/chair/office/dark,/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cQ" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cR" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 4; on = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer,/area/almayer/engineering/engineering_workshop)
+"cS" = (/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engineering_workshop)
+"cT" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engineering_workshop)
+"cU" = (/obj/machinery/door/airlock/almayer/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"cV" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"cW" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"cX" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (EAST)"; icon_state = "map-supply"; dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (EAST)"; icon_state = "map-scrubbers"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"cY" = (/obj/structure/table/almayer,/obj/item/storage/toolbox/mechanical,/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"cZ" = (/obj/structure/table/almayer,/obj/machinery/computer/station_alert,/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"da" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"db" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{icon_regular_floor = "cargo_arrow"; icon_state = "cargo_arrow"},/area/almayer/engineering/engine_core)
+"dc" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/structure/table/almayer,/obj/item/fuelCell,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/engine_core)
+"dd" = (/obj/structure/table/almayer,/obj/item/device/lightreplacer,/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/engineering_workshop)
+"de" = (/obj/structure/table/almayer,/obj/item/clothing/head/welding,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
+"df" = (/obj/machinery/light,/obj/machinery/vending/engivend,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
+"dg" = (/obj/machinery/vending/tool,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
+"dh" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_construction,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
+"di" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/structure/table/almayer,/obj/item/book/manual/engineering_guide,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/engineering_workshop)
+"dj" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dk" = (/obj/structure/table/almayer,/obj/item/device/lightreplacer,/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"dl" = (/obj/structure/largecrate/random/barrel/red,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dm" = (/obj/structure/largecrate/random/barrel/green,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dn" = (/turf/open/floor/engine,/area/space)
+"do" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/open/floor/engine,/area/space)
+"dp" = (/obj/structure/largecrate/random/secure,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dq" = (/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dr" = (/obj/structure/largecrate/random/case/double,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"ds" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/closed/wall/almayer,/area/space)
+"dt" = (/obj/structure/bed/chair/office/dark{dir = 8; layer = 3.25},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"du" = (/obj/machinery/alarm/almayer,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dv" = (/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
+"dw" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dx" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTHEAST)"; icon_state = "intact-supply"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dy" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine,/area/space)
+"dz" = (/turf/open/floor/engine/nitrogen,/area/space)
+"dA" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine/nitrogen,/area/space)
+"dB" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 1; frequency = 1443; id = "mix_lower_in"; on = 1},/turf/open/floor/engine,/area/space)
+"dC" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1443; id_tag = "nit_lower_out"},/turf/open/floor/engine,/area/space)
+"dD" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/open/floor/engine,/area/space)
+"dE" = (/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/open/floor/engine/nitrogen,/area/space)
+"dF" = (/obj/machinery/portable_atmospherics/canister/air,/turf/open/floor/engine,/area/space)
+"dG" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"dH" = (/obj/machinery/atmospherics/binary/pump/high_power/on{tag = "icon-map_on (NORTH)"; icon_state = "map_on"; dir = 1},/turf/open/floor/almayer,/area/space)
+"dI" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/space)
+"dJ" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"dK" = (/obj/machinery/atmospherics/trinary/mixer{dir = 4; icon_state = "map"; name = "Gas mixer N2/O2"; node1_concentration = 0.2; node2_concentration = 0.8; on = 1; set_flow_rate = 100; tag = "icon-map (EAST)"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"dL" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"dM" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"dN" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"dO" = (/obj/machinery/power/monitor{name = "Main Power Grid Monitoring"},/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"dP" = (/turf/open/floor/almayer{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"dQ" = (/obj/structure/bed/chair/office/dark{dir = 4},/turf/open/floor/almayer{tag = "icon-orangecorner"; icon_state = "orangecorner"},/area/almayer/engineering/lower_engine_monitoring)
+"dR" = (/obj/structure/table/almayer,/obj/item/tool/pen,/obj/item/clipboard,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engine_monitoring)
+"dS" = (/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"dT" = (/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"dU" = (/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"dV" = (/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/obj/effect/decal/warning_stripes{tag = "icon-N"; icon_state = "N"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"dW" = (/obj/structure/table/almayer,/obj/item/folder/yellow,/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"dX" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"dY" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (EAST)"; icon_state = "map-scrubbers"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"dZ" = (/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"ea" = (/obj/structure/table/almayer,/obj/item/tool/wrench,/obj/item/book/manual/engineering_particle_accelerator,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engine_monitoring)
+"eb" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"ec" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"ed" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 10"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"ee" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"ef" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 6"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eg" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 11"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eh" = (/obj/machinery/power/apc/almayer{dir = 1},/turf/open/floor/almayer{tag = "icon-orange (NORTHWEST)"; icon_state = "orange"; dir = 9},/area/almayer/engineering/lower_engineering)
+"ei" = (/obj/machinery/light{dir = 1},/obj/machinery/atmospherics/unary/vent_pump,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"ej" = (/obj/machinery/alarm/almayer,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"ek" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTHEAST)"; icon_state = "intact-scrubbers"; dir = 5},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"el" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (SOUTHWEST)"; icon_state = "intact-scrubbers"; dir = 10},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engineering)
+"em" = (/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/lower_engineering)
+"en" = (/obj/structure/table/almayer,/obj/item/tool/crowbar,/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
+"eo" = (/obj/structure/bed/chair/office/dark{dir = 8; layer = 3.25},/obj/machinery/atmospherics/unary/vent_pump{dir = 4; on = 1},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
+"ep" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (EAST)"; icon_state = "map-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{tag = "icon-orangecorner (EAST)"; icon_state = "orangecorner"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
+"eq" = (/turf/open/floor/almayer{tag = "icon-orange (NORTHEAST)"; icon_state = "orange"; dir = 5},/area/almayer/engineering/lower_engine_monitoring)
+"er" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/engine_core)
+"es" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 1"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"et" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 3"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eu" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"ev" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 5"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"ew" = (/obj/machinery/door/airlock/almayer/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"ex" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"ey" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"ez" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (NORTH)"; icon_state = "map-scrubbers"; dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"eA" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"eB" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (NORTH)"; icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"eC" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"eD" = (/obj/machinery/door/airlock/almayer/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"eE" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"eF" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
+"eG" = (/obj/machinery/door/airlock/almayer/maint{name = "\improper Core Hatch"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
+"eH" = (/obj/machinery/light/small{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"eI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/lower_engine_monitoring)
+"eJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eK" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (EAST)"; icon_state = "map-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/engine_core)
+"eL" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_x = 0; tag = "icon-E-corner"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"eM" = (/obj/machinery/power/fusion_engine,/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eN" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 4"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
+"eO" = (/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engineering)
+"eP" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
+"eQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer,/area/almayer/engineering/lower_engineering)
+"eR" = (/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engineering)
+"eS" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_guide,/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
+"eT" = (/obj/structure/table/almayer,/obj/item/storage/toolbox/mechanical,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
+"eU" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_construction,/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
+"eV" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_hacking,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engine_monitoring)
+"eW" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
+"eX" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
+"eY" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
+"eZ" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
+"fa" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"fb" = (/obj/machinery/door/airlock/almayer/maint,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"fc" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"fd" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"fe" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
+"ff" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Oxygen Supply Console"; output_tag = "oxygen_lower_out"; sensors = list("oxy_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fg" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Nitrogen Control Console"; output_tag = "nit_lower_out"; sensors = list("nit_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fi" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "waste_lower_in"; name = "Lower Deck Waste Tank Control"; output_tag = "waste_lower_out"; sensors = list("waste_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fj" = (/turf/open/floor/almayer{dir = 2; icon_state = "orange"; tag = "icon-orange (NORTH)"},/area/space)
+"fk" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTHEAST)"; icon_state = "intact-scrubbers"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fl" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{tag = "icon-map_universal (EAST)"; icon_state = "map_universal"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fm" = (/obj/machinery/meter,/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
+"fn" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/closed/wall/almayer,/area/space)
+"fo" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/turf/closed/wall/almayer,/area/space)
+"fp" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "mix_lower_in"; name = "Lower Mixed Air Control"; output_tag = "mix_lower_out"; sensors = list("mix_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fq" = (/obj/machinery/pipedispenser,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fr" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on,/turf/open/floor/engine,/area/space)
+"fs" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
+"ft" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHWEST)"; icon_state = "intact"; dir = 9},/turf/closed/wall/almayer,/area/space)
+"fu" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHEAST)"; icon_state = "intact"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fv" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
+"fw" = (/obj/machinery/atmospherics/valve/digital/open{tag = "icon-map_valve1 (EAST)"; icon_state = "map_valve1"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
+"fx" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
+"fy" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1443; id = "waste_upper"; name = "Waste Air Injector"; on = 1},/turf/open/floor/plating/plating_catwalk,/area/space)
+"fz" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fA" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadagagagadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafahadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafahadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadadadadadadadadadabaaacacababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacacaiacacaiacacacacabababapapapapapapafafafafabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapapafafafafafapapapafafapapapajajajajajajajafafafafafapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamamamamanaoaoaoaoaoaoaoaoaoaoaqarasatatajajajajajajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamauavawaxayazaoaAaBaCaDaoaEaFaEaoaGaHasaIaJaKaLaKaJaMajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNaOaOaPaQaRaRaSaTaUaVaWaXaYaZaZaXbabbbcbdbebfbgbhaKaMajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaambjbkblbmblbnaobobpbpbqaoaobraoaobsbtbubvbwbxbybzbAbBajafababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaobEbEbEaoaobFbGbHaoaobIbubvbJbKbLbMbNbOajapafabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbPbQbRbSbTbUbVaobWbWbWaobXbYbGbZcacbccbucdcecfcecfceaLajapdlabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgchcicjcjbTckclaocmcncoaocpcqbGcrcscbccasctcuctcuctcvcwajapdmabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcxcycjcjbTcjczaocAcBcCcDcEcFcGcHcIcbcJcKcLcKcLcKcMcvcNajapdmabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcOcPcQcRcScTcTcUcVcWcXaocYcrbGcrcZcbdaasdbcudbcudbcvdcajapdpabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCdddedfdgbTdhdiaodkdtdNaodOdPbGdQdRcbdabudSdTdUdTdUdVaKajapdqabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaodWdXdYaoaodZbGeaaoaoebbuecedeeefeeegbBajapdrabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameheiejekelemaoeneoepeqaoaobraoaoerdabueceseeeteuevbOajafababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaewexeyezeAeBeCeDeEeEeFeEeGeHeIeIeGeJeKbceLeMeueNbhaKaMajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameOblePbleQeRaoeSeTeUeVaoaEaFaEaoaGeWcueXeYaLaLaLeYeZajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamamamfaamaoaoaoaoaoaoaoaoaoaobububuajajajajajajajajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapapfbfcfdfcfbapapapapapapafafajajajajajajajafafafafapapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacamamfeamamacacacababababafafapapapapapafafafabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacfffgfhdufifjfjfjabaaaaacabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacafaffkflfmfnfoacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacfpfqdwafdvaldBdoabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacafafdjafdvalfrdnabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjaffsdsftacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjaffufvfwfxalfyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjafafafafafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacafafdxbibiflfzfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacaedGdJdJdKdLdMdHabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafacaldIacaldIacaldIabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababacdndyacdzdAacdBdCabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdndDacdzdEacdndFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdndnacdndnacdndnabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
