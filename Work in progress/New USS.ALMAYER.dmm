@@ -1,19 +1,19 @@
 "aa" = (/turf/open/space,/area/space)
-"ab" = (/turf/closed/wall/almayer/outer,/area/space)
-"ac" = (/turf/closed/wall/almayer,/area/space)
+"ab" = (/turf/closed/wall/almayer/outer,/area/almayer/hull/lower_hull)
+"ac" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
 "ad" = (/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/hull/lower_hull)
-"ae" = (/turf/open/floor/almayer,/area/space)
-"af" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"ae" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"af" = (/turf/closed/wall/almayer,/area/almayer/hull/lower_hull)
 "ag" = (/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/shuttle/distress/arrive_3)
-"ah" = (/obj/machinery/door/airlock/almayer/secure{dir = 4; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"ai" = (/obj/machinery/door/airlock/almayer/secure{dir = 2; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"ah" = (/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"ai" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
 "aj" = (/turf/closed/wall/almayer,/area/almayer/engineering/engine_core)
 "ak" = (/obj/effect/step_trigger/teleporter/random{affect_ghosts = 1; name = "tele_ground1"; teleport_x = 180; teleport_x_offset = 200; teleport_y = 50; teleport_y_offset = 80; teleport_z = 1; teleport_z_offset = 1},/turf/open/space,/area/space)
-"al" = (/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/space)
+"al" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (NORTH)"; icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
 "am" = (/turf/closed/wall/almayer,/area/almayer/engineering/lower_engineering)
 "an" = (/obj/machinery/door/airlock/almayer/maint{dir = 2},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
 "ao" = (/turf/closed/wall/almayer,/area/almayer/engineering/lower_engine_monitoring)
-"ap" = (/turf/open/floor/plating/plating_catwalk,/area/space)
+"ap" = (/obj/machinery/door/airlock/almayer/secure{dir = 4; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
 "aq" = (/obj/machinery/alarm/almayer,/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
 "ar" = (/obj/machinery/power/apc/almayer{dir = 1},/obj/structure/cable/yellow{d2 = 2; icon_state = "0-2"},/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
 "as" = (/turf/open/floor/almayer,/area/almayer/engineering/engine_core)
@@ -58,7 +58,7 @@
 "bf" = (/obj/effect/decal/warning_stripes{icon_state = "E"; tag = "icon-W"},/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"; layer = 2.1},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
 "bg" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 2"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
 "bh" = (/obj/effect/decal/warning_stripes{tag = "icon-W"; icon_state = "W"},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
-"bi" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"bi" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
 "bj" = (/obj/effect/landmark/start{name = "JoinLate"},/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engineering)
 "bk" = (/obj/machinery/light,/obj/effect/landmark{name = "JoinLate"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
 "bl" = (/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
@@ -163,36 +163,36 @@
 "dg" = (/obj/machinery/vending/tool,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
 "dh" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_construction,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/engineering_workshop)
 "di" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/obj/structure/table/almayer,/obj/item/book/manual/engineering_guide,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/engineering_workshop)
-"dj" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"dj" = (/turf/closed/wall/almayer,/area/almayer/engineering/starboard_atmos)
 "dk" = (/obj/structure/table/almayer,/obj/item/device/lightreplacer,/turf/open/floor/almayer{tag = "icon-orange (WEST)"; icon_state = "orange"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
-"dl" = (/obj/structure/largecrate/random/barrel/red,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dm" = (/obj/structure/largecrate/random/barrel/green,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dn" = (/turf/open/floor/engine,/area/space)
-"do" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/open/floor/engine,/area/space)
-"dp" = (/obj/structure/largecrate/random/secure,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dq" = (/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dr" = (/obj/structure/largecrate/random/case/double,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"ds" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/closed/wall/almayer,/area/space)
+"dl" = (/obj/machinery/door/airlock/almayer/secure{dir = 2; name = "\improper Exterior Airlock"; req_access_txt = "0"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"dm" = (/obj/structure/largecrate/random/barrel/red,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"dn" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"do" = (/obj/machinery/light/small{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"dp" = (/obj/structure/largecrate/random/barrel/green,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"dq" = (/obj/structure/largecrate/random/secure,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"dr" = (/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"ds" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
 "dt" = (/obj/structure/bed/chair/office/dark{dir = 8; layer = 3.25},/turf/open/floor/almayer,/area/almayer/engineering/lower_engine_monitoring)
-"du" = (/obj/machinery/alarm/almayer,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dv" = (/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
-"dw" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dx" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTHEAST)"; icon_state = "intact-supply"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"dy" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine,/area/space)
-"dz" = (/turf/open/floor/engine/nitrogen,/area/space)
-"dA" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine/nitrogen,/area/space)
-"dB" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 1; frequency = 1443; id = "mix_lower_in"; on = 1},/turf/open/floor/engine,/area/space)
-"dC" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1443; id_tag = "nit_lower_out"},/turf/open/floor/engine,/area/space)
-"dD" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/open/floor/engine,/area/space)
-"dE" = (/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/open/floor/engine/nitrogen,/area/space)
-"dF" = (/obj/machinery/portable_atmospherics/canister/air,/turf/open/floor/engine,/area/space)
-"dG" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
-"dH" = (/obj/machinery/atmospherics/binary/pump/high_power/on{tag = "icon-map_on (NORTH)"; icon_state = "map_on"; dir = 1},/turf/open/floor/almayer,/area/space)
-"dI" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/space)
-"dJ" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
-"dK" = (/obj/machinery/atmospherics/trinary/mixer{dir = 4; icon_state = "map"; name = "Gas mixer N2/O2"; node1_concentration = 0.2; node2_concentration = 0.8; on = 1; set_flow_rate = 100; tag = "icon-map (EAST)"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
-"dL" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
-"dM" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/space)
+"du" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"dv" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dw" = (/turf/closed/wall/almayer/outer,/area/almayer/engineering/starboard_atmos)
+"dx" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Oxygen Supply Console"; output_tag = "oxygen_lower_out"; sensors = list("oxy_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dy" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Nitrogen Control Console"; output_tag = "nit_lower_out"; sensors = list("nit_sensor" = "Tank")},/obj/machinery/light{dir = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dz" = (/obj/machinery/light/small{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/hull/lower_hull)
+"dA" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "waste_lower_in"; name = "Lower Deck Waste Tank Control"; output_tag = "waste_lower_out"; sensors = list("waste_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dB" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dC" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTHEAST)"; icon_state = "intact-scrubbers"; dir = 5},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"dD" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{tag = "icon-map_universal (EAST)"; icon_state = "map_universal"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dE" = (/obj/machinery/meter,/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/starboard_atmos)
+"dF" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/closed/wall/almayer,/area/almayer/engineering/starboard_atmos)
+"dG" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/turf/closed/wall/almayer,/area/almayer/engineering/starboard_atmos)
+"dH" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "mix_lower_in"; name = "Lower Mixed Air Control"; output_tag = "mix_lower_out"; sensors = list("mix_sensor" = "Tank")},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dI" = (/obj/machinery/pipedispenser,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"dJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"dK" = (/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/starboard_atmos)
+"dL" = (/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/almayer/engineering/starboard_atmos)
+"dM" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 1; frequency = 1443; id = "mix_lower_in"; on = 1},/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
 "dN" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/lower_engine_monitoring)
 "dO" = (/obj/machinery/power/monitor{name = "Main Power Grid Monitoring"},/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
 "dP" = (/turf/open/floor/almayer{tag = "icon-orangecorner (WEST)"; icon_state = "orangecorner"; dir = 8},/area/almayer/engineering/lower_engine_monitoring)
@@ -232,8 +232,8 @@
 "ex" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
 "ey" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
 "ez" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{tag = "icon-map-scrubbers (NORTH)"; icon_state = "map-scrubbers"; dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
-"eA" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
-"eB" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{tag = "icon-map-supply (NORTH)"; icon_state = "map-supply"; dir = 1},/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
+"eA" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"eB" = (/obj/machinery/power/apc/almayer{dir = 1; pixel_w = -22},/obj/structure/cable,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
 "eC" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engineering)
 "eD" = (/obj/machinery/door/airlock/almayer/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engine_monitoring)
 "eE" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (EAST)"; icon_state = "intact-scrubbers"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/lower_engine_monitoring)
@@ -248,7 +248,7 @@
 "eN" = (/obj/machinery/power/fusion_engine{name = "\improper S-52 fusion reactor 4"},/obj/structure/cable/yellow{icon_state = "0-8"; layer = 2.1; d1 = 2; d2 = 4},/turf/open/floor/almayer{tag = "icon-test_floor4"; icon_state = "test_floor4"},/area/almayer/engineering/engine_core)
 "eO" = (/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engineering)
 "eP" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engineering)
-"eQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer,/area/almayer/engineering/lower_engineering)
+"eQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
 "eR" = (/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange (SOUTHEAST)"; icon_state = "orange"; dir = 6},/area/almayer/engineering/lower_engineering)
 "eS" = (/obj/structure/table/almayer,/obj/item/book/manual/engineering_guide,/turf/open/floor/almayer{tag = "icon-orange (SOUTHWEST)"; icon_state = "orange"; dir = 10},/area/almayer/engineering/lower_engine_monitoring)
 "eT" = (/obj/structure/table/almayer,/obj/item/storage/toolbox/mechanical,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/lower_engine_monitoring)
@@ -258,33 +258,64 @@
 "eX" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/almayer{tag = "icon-plating_striped (WEST)"; icon_state = "plating_striped"; dir = 8},/area/almayer/engineering/engine_core)
 "eY" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/engineering/engine_core)
 "eZ" = (/obj/effect/decal/warning_stripes{tag = "icon-S"; icon_state = "S"},/turf/open/floor/almayer{tag = "icon-plating_striped (EAST)"; icon_state = "plating_striped"; dir = 4},/area/almayer/engineering/engine_core)
-"fa" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
-"fb" = (/obj/machinery/door/airlock/almayer/maint,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
-"fc" = (/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
-"fd" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
-"fe" = (/obj/machinery/door/airlock/almayer/engineering{dir = 2; name = "\improper Atmospherics"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/lower_engineering)
-"ff" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Oxygen Supply Console"; output_tag = "oxygen_lower_out"; sensors = list("oxy_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fg" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; name = "Lower Nitrogen Control Console"; output_tag = "nit_lower_out"; sensors = list("nit_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fi" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "waste_lower_in"; name = "Lower Deck Waste Tank Control"; output_tag = "waste_lower_out"; sensors = list("waste_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fj" = (/turf/open/floor/almayer{dir = 2; icon_state = "orange"; tag = "icon-orange (NORTH)"},/area/space)
-"fk" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTH)"; icon_state = "intact-supply"; dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTHEAST)"; icon_state = "intact-scrubbers"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fl" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{tag = "icon-map_universal (EAST)"; icon_state = "map_universal"; dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fm" = (/obj/machinery/meter,/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
-"fn" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/closed/wall/almayer,/area/space)
-"fo" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/turf/closed/wall/almayer,/area/space)
-"fp" = (/obj/machinery/computer/general_air_control/large_tank_control{frequency = 1443; input_tag = "mix_lower_in"; name = "Lower Mixed Air Control"; output_tag = "mix_lower_out"; sensors = list("mix_sensor" = "Tank")},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fq" = (/obj/machinery/pipedispenser,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fr" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on,/turf/open/floor/engine,/area/space)
-"fs" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/space)
-"ft" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHWEST)"; icon_state = "intact"; dir = 9},/turf/closed/wall/almayer,/area/space)
-"fu" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHEAST)"; icon_state = "intact"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fv" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
-"fw" = (/obj/machinery/atmospherics/valve/digital/open{tag = "icon-map_valve1 (EAST)"; icon_state = "map_valve1"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
-"fx" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/space)
+"fa" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on,/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fb" = (/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fc" = (/obj/structure/largecrate/random/case/small,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fd" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/turf/open/floor/almayer{tag = "icon-orange (EAST)"; icon_state = "orange"; dir = 4},/area/almayer/engineering/starboard_atmos)
+"fe" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/closed/wall/almayer,/area/almayer/engineering/starboard_atmos)
+"ff" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHWEST)"; icon_state = "intact"; dir = 9},/turf/closed/wall/almayer,/area/almayer/engineering/starboard_atmos)
+"fg" = (/obj/machinery/atmospherics/pipe/simple/visible{tag = "icon-intact (NORTHEAST)"; icon_state = "intact"; dir = 5},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fh" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/starboard_atmos)
+"fi" = (/obj/machinery/atmospherics/valve/digital/open{tag = "icon-map_valve1 (EAST)"; icon_state = "map_valve1"; dir = 4},/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/starboard_atmos)
+"fj" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange (NORTH)"; icon_state = "orange"; dir = 1},/area/almayer/engineering/starboard_atmos)
+"fk" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fl" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (NORTHEAST)"; icon_state = "intact-supply"; dir = 5},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"fm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{tag = "icon-intact-supply (EAST)"; icon_state = "intact-supply"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"fn" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fo" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fp" = (/turf/open/floor/almayer,/area/almayer/engineering/starboard_atmos)
+"fq" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6; icon_state = "intact"; tag = "icon-intact (NORTHEAST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"fr" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"fs" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"ft" = (/obj/machinery/atmospherics/trinary/mixer{dir = 4; icon_state = "map"; name = "Gas mixer N2/O2"; node1_concentration = 0.2; node2_concentration = 0.8; on = 1; set_flow_rate = 100; tag = "icon-map (EAST)"},/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"fu" = (/obj/machinery/atmospherics/binary/pump/on{tag = "icon-map_on (EAST)"; icon_state = "map_on"; dir = 4},/obj/machinery/light,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"fv" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{tag = "icon-orange"; icon_state = "orange"},/area/almayer/engineering/starboard_atmos)
+"fw" = (/obj/machinery/atmospherics/binary/pump/high_power/on{tag = "icon-map_on (NORTH)"; icon_state = "map_on"; dir = 1},/turf/open/floor/almayer,/area/almayer/engineering/starboard_atmos)
+"fx" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/window/framed/almayer/hull,/turf/open/floor/plating,/area/almayer/engineering/starboard_atmos)
 "fy" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1443; id = "waste_upper"; name = "Waste Air Injector"; on = 1},/turf/open/floor/plating/plating_catwalk,/area/space)
-"fz" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
-"fA" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 10; icon_state = "intact"; tag = "icon-intact (NORTHWEST)"},/obj/machinery/meter,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/space)
+"fz" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fA" = (/turf/open/floor/engine/nitrogen,/area/almayer/engineering/starboard_atmos)
+"fB" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1444; id_tag = "nit_upper_out"},/turf/open/floor/engine/nitrogen,/area/almayer/engineering/starboard_atmos)
+"fC" = (/obj/machinery/atmospherics/unary/vent_pump/siphon/on{dir = 1; external_pressure_bound = 0; external_pressure_bound_default = 0; frequency = 1443; id_tag = "nit_lower_out"},/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fD" = (/obj/machinery/portable_atmospherics/canister/oxygen,/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fE" = (/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/open/floor/engine/nitrogen,/area/almayer/engineering/starboard_atmos)
+"fF" = (/obj/machinery/portable_atmospherics/canister/air,/turf/open/floor/engine,/area/almayer/engineering/starboard_atmos)
+"fG" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal{tag = "icon-map_universal (EAST)"; icon_state = "map_universal"; dir = 4},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"fH" = (/obj/structure/largecrate/random/case/double,/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fI" = (/obj/machinery/light/small{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/hull/lower_hull)
+"fJ" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/almayer{tag = "icon-blue (NORTHEAST)"; icon_state = "plating"; dir = 5},/area/almayer/hull/lower_hull)
+"fK" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fL" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fM" = (/obj/machinery/light/small{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fN" = (/obj/machinery/alarm/almayer{dir = 1},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"fO" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fP" = (/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fQ" = (/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fR" = (/obj/machinery/light/small{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fS" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fT" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"; tag = ""},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fU" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fV" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fW" = (/obj/machinery/light/small{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fX" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"fY" = (/obj/structure/cable{d1 = 1; d2 = 4; icon_state = "1-4"; tag = "90Curve"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"fZ" = (/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"ga" = (/obj/machinery/door/airlock/almayer/maint,/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"gb" = (/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/engineering/starboard_atmos)
+"gc" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; tag = ""},/obj/structure/cable{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/open/floor/plating/plating_catwalk,/area/almayer/engineering/starboard_atmos)
+"gd" = (/obj/machinery/light/small{tag = "icon-bulb1 (NORTH)"; icon_state = "bulb1"; dir = 1},/obj/structure/cable{tag = "icon-4-8"; icon_state = "4-8"; d2 = 8},/turf/open/floor/plating/plating_catwalk,/area/almayer/hull/lower_hull)
+"ge" = (/obj/structure/cable{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
+"gf" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/open/floor/almayer{icon_regular_floor = "mono"; icon_state = "mono"},/area/almayer/hull/lower_hull)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -326,55 +357,55 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadadadadadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadadadagagagadadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadaddzadadaddzadadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabfIadadagagagadadfJabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafahadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafahadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacadadadadadadadadadabaaacacababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacacaiacacaiacacacacabababapapapapapapafafafafabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapapafafafafafapapapafafapapapajajajajajajajafafafafafapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamamamamanaoaoaoaoaoaoaoaoaoaoaqarasatatajajajajajajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamauavawaxayazaoaAaBaCaDaoaEaFaEaoaGaHasaIaJaKaLaKaJaMajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNaOaOaPaQaRaRaSaTaUaVaWaXaYaZaZaXbabbbcbdbebfbgbhaKaMajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaambjbkblbmblbnaobobpbpbqaoaobraoaobsbtbubvbwbxbybzbAbBajafababaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaobEbEbEaoaobFbGbHaoaobIbubvbJbKbLbMbNbOajapafabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbPbQbRbSbTbUbVaobWbWbWaobXbYbGbZcacbccbucdcecfcecfceaLajapdlabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgchcicjcjbTckclaocmcncoaocpcqbGcrcscbccasctcuctcuctcvcwajapdmabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcxcycjcjbTcjczaocAcBcCcDcEcFcGcHcIcbcJcKcLcKcLcKcMcvcNajapdmabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcOcPcQcRcScTcTcUcVcWcXaocYcrbGcrcZcbdaasdbcudbcudbcvdcajapdpabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCdddedfdgbTdhdiaodkdtdNaodOdPbGdQdRcbdabudSdTdUdTdUdVaKajapdqabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaodWdXdYaoaodZbGeaaoaoebbuecedeeefeeegbBajapdrabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameheiejekelemaoeneoepeqaoaobraoaoerdabueceseeeteuevbOajafababaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaewexeyezeAeBeCeDeEeEeFeEeGeHeIeIeGeJeKbceLeMeueNbhaKaMajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameOblePbleQeRaoeSeTeUeVaoaEaFaEaoaGeWcueXeYaLaLaLeYeZajafabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamamamfaamaoaoaoaoaoaoaoaoaoaobububuajajajajajajajajapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapapfbfcfdfcfbapapapapapapafafajajajajajajajafafafafapapabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacamamfeamamacacacababababafafapapapapapafafafabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacfffgfhdufifjfjfjabaaaaacabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacafaffkflfmfnfoacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacapacfpfqdwafdvaldBdoabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacafafdjafdvalfrdnabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjaffsdsftacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjaffufvfwfxalfyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacdqafdjafafafafafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacafafdxbibiflfzfAabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacafacaedGdJdJdKdLdMdHabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafacaldIacaldIacaldIabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababacdndyacdzdAacdBdCabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdndDacdzdEacdndFabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdndnacdndnacdndnabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabacacacacacacacacabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahahaffIagagagagagagagfJabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacafadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafdoafadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacafadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKapadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKaffIagagagagagagagfJabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKafadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKapadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacafadagagagagagagagadabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffLaffIadadadadadadadfJabaaafafababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffMafafdlafafdlafafafafabababfOfPfPfPfPfPfQfQfRfSabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffTfUfVfVfVfVfVfUfUfUfVfWfUfUfXajajajajajajajaifYfQfQfQfZabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamamamamanaoaoaoaoaoaoaoaoaoaoaqarasatatajajajajajajacabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamauavawaxayazaoaAaBaCaDaoaEaFaEaoaGaHasaIaJaKaLaKaJaMajacabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNaOaOaPaQaRaRaSaTaUaVaWaXaYaZaZaXbabbbcbdbebfbgbhaKaMajfKabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaambjbkblbmblbnaobobpbpbqaoaobraoaobsbtbubvbwbxbybzbAbBajfKababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaobEbEbEaoaobFbGbHaoaobIbubvbJbKbLbMbNbOajdoaiabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbPbQbRbSbTbUbVaobWbWbWaobXbYbGbZcacbccbucdcecfcecfceaLajacdmabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgchcicjcjbTckclaocmcncoaocpcqbGcrcscbccasctcuctcuctcvcwajacdpabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcxcycjcjbTcjczaocAcBcCcDcEcFcGcHcIcbcJcKcLcKcLcKcMcvcNajacdpabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacgcOcPcQcRcScTcTcUcVcWcXaocYcrbGcrcZcbdaasdbcudbcudbcvdcajacdqabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCdddedfdgbTdhdiaodkdtdNaodOdPbGdQdRcbdabudSdTdUdTdUdVaKajdodrabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabCbCbCbCbCbDbCbCaodWdXdYaoaodZbGeaaoaoebbuecedeeefeeegbBajacfHabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameheiejekelemaoeneoepeqaoaobraoaoerdabueceseeeteuevbOajfKababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaewexeyezaealeCeDeEeEeFeEeGeHeIeIeGeJeKbceLeMeueNbhaKaMajfKabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaameOblePblbieRaoeSeTeUeVaoaEaFaEaoaGeWcueXeYaLaLaLeYeZajfKabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamamamdjdjdndjdjaoaoaoaoaoaoaoaoaobububuajajajajajajajajacabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffOfPgagbgcgbgafPfPfPgdfPfPfQfSajajajajajajajaigefVfWfUfXabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacdjdjdjdvdjdjdjdjdjdwabababfYfQfPgdfPfPfPfQfQgfabababababaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacdjdxdydufNdAdjdjdjdwaaaaafabababababababababababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacdjdBdsdCdDdEdFdGdjdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafacdjdHdIdJdsdKdLdMeAdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjeBdseQdsdKdLfafbdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjfcdseQdsfdfeffdjdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjfcdseQdsfgfhfifjdLfyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjfcdseQdsdsdsdsfkdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjdBdsflfmfmfGfnfodwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffKdjfpfqfrfsftfufvfwdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaidjdLfxdjdLfxdjdLfxdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababdjfbfzdjfAfBdjdMfCdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwfbfDdjfAfEdjfbfFdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwfbfbdjfbfbdjfbfbdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwdjdjdjdjdjdjdjdjdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwdjdjdjdjdjdjdjdjdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadwdwdwdwdwdwdwdwdwdwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
